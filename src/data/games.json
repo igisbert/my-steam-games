@@ -906,6 +906,11 @@
       "playtime_forever": 194
     },
     {
+      "appid": 1580180,
+      "name": "Gunbrella",
+      "playtime_forever": 193
+    },
+    {
       "appid": 341940,
       "name": "Hatred",
       "playtime_forever": 191
@@ -1074,11 +1079,6 @@
       "appid": 91900,
       "name": "Post Apocalyptic Mayhem",
       "playtime_forever": 104
-    },
-    {
-      "appid": 1580180,
-      "name": "Gunbrella",
-      "playtime_forever": 103
     },
     {
       "appid": 225540,
@@ -2469,7 +2469,7 @@
     },
     {
       "appid": 2138330,
-      "name": "Cyberpunk 2077: Phantom Liberty",
+      "name": "Cyberpunk 2077: Widmo wolności",
       "playtime_forever": 0,
       "coverUrl": "https://cdn2.steamgriddb.com/grid/8b69d3d879cf6a6766dece6a8df9eb63.png"
     },
@@ -2746,7 +2746,7 @@
   "profile": {
     "avatar": "https://avatars.steamstatic.com/d04cb56455fd379dd68d3b86329fbb293033f606_full.jpg",
     "level": 80,
-    "totalHours": 10214,
+    "totalHours": 10215,
     "accountAgeYears": 14
   }
 }
