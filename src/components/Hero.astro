@@ -12,83 +12,90 @@ const { profile } = Astro.props;
 ---
 
 <section class="hero">
-  <img class="hero__avatar" src={profile.avatar} alt="Avatar de Steam" width="128" height="128" />
-  <h1>Portfolio de Iñaki</h1>
-  <div class="hero__stats">
-    <span class="hero__stat">
-      <span class="hero__stat-value">{profile.totalHours.toLocaleString('es-ES')}h</span>
-      <span class="hero__stat-label">jugadas</span>
-    </span>
-    <span class="hero__stat">
-      <span class="hero__stat-value">Nv. {profile.level}</span>
-      <span class="hero__stat-label">Steam</span>
-    </span>
-    <span class="hero__stat">
-      <span class="hero__stat-value">{profile.accountAgeYears ?? 'N/A'}</span>
-      <span class="hero__stat-label">{profile.accountAgeYears !== null ? 'años' : ''}</span>
-    </span>
+  <div class="hero__avatar-wrapper">
+    <img class="hero__avatar" src={profile.avatar} alt="Avatar de Steam" width="112" height="112" />
+  </div>
+  <div class="hero__hours">
+    <span class="hero__hours-value">{profile.totalHours.toLocaleString('es-ES')}</span>
+  </div>
+  <span class="hero__label">horas jugadas en steam</span>
+  <div class="hero__meta">
+    <span class="hero__meta-item">Nv. {profile.level}</span>
+    <span class="hero__meta-sep">·</span>
+    <span class="hero__meta-item">{profile.accountAgeYears ?? 'N/A'}{profile.accountAgeYears !== null ? ' años' : ''}</span>
   </div>
 </section>
 
 <style>
   .hero {
     text-align: center;
-    padding: var(--space-6) var(--space-5);
+    padding: clamp(40px, 8vw, 80px) var(--space-5);
+  }
+
+  .hero__avatar-wrapper {
+    margin: 0 auto var(--space-5);
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, var(--color-accent), #a855f7, var(--color-accent));
+    box-shadow: 0 0 30px rgba(230, 175, 46, 0.25);
   }
 
   .hero__avatar {
-    margin: 0 auto var(--space-4);
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    width: 128px;
-    height: 128px;
     object-fit: cover;
-    border: 3px solid var(--color-accent);
+    display: block;
+    background-color: var(--color-bg);
   }
 
-  h1 {
-    margin: 0 0 var(--space-3);
-    font-size: var(--text-3xl);
-    font-weight: 700;
-    color: var(--color-primary);
-    letter-spacing: -0.02em;
-  }
-
-  .hero__stats {
+  .hero__hours {
     display: flex;
+    align-items: baseline;
     justify-content: center;
-    gap: var(--space-5);
+    gap: 0.1em;
+    line-height: 1;
   }
 
-  .hero__stat {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-  }
-
-  .hero__stat-value {
-    font-size: var(--text-lg);
+  .hero__hours-value {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(64px, 14vw, 160px);
     font-weight: 700;
     color: var(--color-accent);
+    text-shadow:
+      0 0 20px rgba(230, 175, 46, 0.6),
+      0 0 60px rgba(230, 175, 46, 0.3),
+      0 0 100px rgba(230, 175, 46, 0.15);
   }
 
-  .hero__stat-label {
+  .hero__label {
+    display: block;
+    margin-top: var(--space-2);
+    font-size: clamp(12px, 2vw, 16px);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--color-primary);
+    opacity: 0.4;
+  }
+
+  .hero__meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+    padding: var(--space-1) var(--space-3);
+    display: inline-flex;
+    border: 1px solid rgba(245, 237, 240, 0.1);
+    border-radius: 999px;
     font-size: var(--text-sm);
     color: var(--color-primary);
-    opacity: 0.7;
+    opacity: 0.5;
   }
 
-  @media (max-width: 768px) {
-    h1 {
-      font-size: var(--text-2xl);
-    }
-
-    .hero__stats {
-      gap: var(--space-4);
-    }
-
-    .hero__avatar {
-      width: 96px;
-      height: 96px;
-    }
+  .hero__meta-sep {
+    font-size: var(--text-xs);
   }
 </style>
