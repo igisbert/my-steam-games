@@ -1,0 +1,71 @@
+---
+import GameCardTop from './GameCardTop.astro';
+
+interface Game {
+  appid: number;
+  name: string;
+  playtime_forever: number;
+}
+
+interface Props {
+  title: string;
+  games: Game[];
+}
+
+const { title, games } = Astro.props;
+---
+
+<section class="gallery">
+  <div class="gallery__header">
+    <h2 class="gallery__title">{title}</h2>
+  </div>
+  <div class="gallery__grid">
+    {games.map((game) => (
+      <GameCardTop
+        appid={game.appid}
+        name={game.name}
+        playtime_forever={game.playtime_forever}
+      />
+    ))}
+  </div>
+</section>
+
+<style>
+  .gallery {
+    padding: 0 var(--space-5) var(--space-6);
+  }
+
+  .gallery__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+  }
+
+  .gallery__title {
+    margin: 0;
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+  }
+
+  .gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-4);
+  }
+
+  @media (max-width: 768px) {
+    .gallery__grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

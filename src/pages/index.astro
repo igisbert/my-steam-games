@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
-import GameGallery from '../components/GameGallery.astro';
+import GameGalleryTop from '../components/GameGalleryTop.astro';
+import GameGalleryCompleted from '../components/GameGalleryCompleted.astro';
 import { TOP_GAMES_COUNT } from '../config.js';
 import games from '../data/games.json';
 
@@ -12,8 +13,8 @@ const completedGames = games.completedGames;
 <Layout>
   <main>
     <Hero />
-    <GameGallery title={`Top ${Math.min(TOP_GAMES_COUNT, games.topGames.length)} más jugados`} games={topGames} variant="top" />
-    <GameGallery title="Todos completados" games={completedGames} variant="completed" />
+    <GameGalleryTop title={`Top ${Math.min(TOP_GAMES_COUNT, games.topGames.length)} más jugados`} games={topGames} />
+    <GameGalleryCompleted title="Todos completados" games={completedGames} />
   </main>
 </Layout>
 

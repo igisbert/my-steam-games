@@ -1,5 +1,4 @@
 ---
-import GameCardTop from './GameCardTop.astro';
 import GameCardCompleted from './GameCardCompleted.astro';
 
 interface Game {
@@ -12,41 +11,27 @@ interface Game {
 interface Props {
   title: string;
   games: Game[];
-  variant: 'top' | 'completed';
 }
 
-const { title, games, variant } = Astro.props;
+const { title, games } = Astro.props;
 ---
 
 <section class="gallery">
   <div class="gallery__header">
     <h2 class="gallery__title">{title}</h2>
-    {variant === 'completed' && (
-      <div class="gallery__sort">
-        <button class="gallery__sort-btn gallery__sort-btn--active" data-sort="name">🔤 Nombre</button>
-        <button class="gallery__sort-btn" data-sort="hours">⏱️ Horas</button>
-      </div>
-    )}
+    <div class="gallery__sort">
+      <button class="gallery__sort-btn gallery__sort-btn--active" data-sort="name">🔤 Nombre</button>
+      <button class="gallery__sort-btn" data-sort="hours">⏱️ Horas</button>
+    </div>
   </div>
-  <div
-    class:list={['gallery__grid', variant === 'top' && 'gallery__grid--top']}
-    data-games={JSON.stringify(games)}
-  >
+  <div class="gallery__grid">
     {games.map((game) => (
-      variant === 'top' ? (
-        <GameCardTop
-          appid={game.appid}
-          name={game.name}
-          playtime_forever={game.playtime_forever}
-        />
-      ) : (
-        <GameCardCompleted
-          appid={game.appid}
-          name={game.name}
-          playtime_forever={game.playtime_forever}
-          coverUrl={game.coverUrl || `https://cdn.cloudflare.steamstatic.com/steam/apps/${game.appid}/library_600x900.jpg`}
-        />
-      )
+      <GameCardCompleted
+        appid={game.appid}
+        name={game.name}
+        playtime_forever={game.playtime_forever}
+        coverUrl={game.coverUrl || `https://cdn.cloudflare.steamstatic.com/steam/apps/${game.appid}/library_600x900.jpg`}
+      />
     ))}
   </div>
 </section>
@@ -54,11 +39,9 @@ const { title, games, variant } = Astro.props;
 <script>
   function initSort() {
     document.querySelectorAll('.gallery').forEach((section) => {
-      const grid = section.querySelector('.gallery__grid[data-games]');
+      const grid = section.querySelector('.gallery__grid');
       const buttons = section.querySelectorAll('.gallery__sort-btn');
       if (!grid || !buttons.length) return;
-
-      const games = JSON.parse(grid.getAttribute('data-games') || '[]');
 
       buttons.forEach((btn) => {
         btn.addEventListener('click', () => {
@@ -66,38 +49,20 @@ const { title, games, variant } = Astro.props;
           btn.classList.add('gallery__sort-btn--active');
 
           const sortKey = btn.getAttribute('data-sort');
-          const sorted = [...games].sort((a, b) => {
-            if (sortKey === 'name') return a.name.localeCompare(b.name);
-            return b.playtime_forever - a.playtime_forever;
-          });
+          const cards = [...grid.children];
+          cards.sort((a, b) => {
+            const aName = a.querySelector('.game-card-completed__name')?.textContent || '';
+            const bName = b.querySelector('.game-card-completed__name')?.textContent || '';
+            const aHours = parseInt(a.querySelector('.game-card-completed__hours')?.textContent || '0') || 0;
+            const bHours = parseInt(b.querySelector('.game-card-completed__hours')?.textContent || '0') || 0;
 
-          renderGrid(grid as HTMLElement, sorted);
+            if (sortKey === 'name') return aName.localeCompare(bName);
+            return bHours - aHours;
+          });
+          cards.forEach((card) => grid.appendChild(card));
         });
       });
     });
-  }
-
-  function renderGrid(grid: HTMLElement, games: { appid: number; name: string; playtime_forever: number; coverUrl?: string }[]) {
-    const cards = games.map((game) => {
-      const hours = game.playtime_forever > 0 ? Math.floor(game.playtime_forever / 60) : null;
-      const hoursText = hours !== null ? `${hours.toLocaleString('es-ES')}h` : 'Horas no disponibles';
-      const coverUrl = game.coverUrl || `https://cdn.cloudflare.steamstatic.com/steam/apps/${game.appid}/library_600x900.jpg`;
-      const article = document.createElement('article');
-      article.className = 'game-card-completed';
-      article.tabIndex = 0;
-      article.innerHTML = `
-        <div class="game-card-completed__image-wrapper">
-          <img class="game-card-completed__image" src="${coverUrl}" alt="Portada de ${game.name}" loading="lazy" width="300" height="450" />
-        </div>
-        <div class="game-card-completed__info">
-          <h3 class="game-card-completed__name">${game.name}</h3>
-          <span class="game-card-completed__hours">${hoursText}</span>
-        </div>
-      `;
-      return article;
-    });
-    grid.innerHTML = '';
-    cards.forEach((card) => grid.appendChild(card));
   }
 
   document.addEventListener('astro:page-load', initSort);
@@ -163,19 +128,10 @@ const { title, games, variant } = Astro.props;
     gap: var(--space-4);
   }
 
-  .gallery__grid--top {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--space-4);
-  }
-
   @media (max-width: 768px) {
     .gallery__grid {
       grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
       gap: var(--space-3);
-    }
-
-    .gallery__grid--top {
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
   }
 
@@ -183,10 +139,6 @@ const { title, games, variant } = Astro.props;
     .gallery__grid {
       grid-template-columns: repeat(2, 1fr);
       gap: var(--space-2);
-    }
-
-    .gallery__grid--top {
-      grid-template-columns: 1fr;
     }
   }
 </style>
