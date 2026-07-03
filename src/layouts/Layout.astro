@@ -7,6 +7,7 @@ import '@fontsource/cinzel-decorative/400.css';
 import '@fontsource/cinzel-decorative/700.css';
 import cinzel400 from '@fontsource/cinzel-decorative/400.css?url';
 import cinzel700 from '@fontsource/cinzel-decorative/700.css?url';
+import Noise from '@/components/Noise.astro';
 
 interface Props {
   title?: string;
@@ -28,6 +29,7 @@ const { title = 'Portfolio de Iñaki' } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Noise />
     <slot />
   </body>
 </html>
