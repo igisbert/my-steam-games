@@ -3,7 +3,7 @@ interface Props {
   appid: number;
   name: string;
   playtime_forever: number;
-  lastPlayed: string | null;
+  lastPlayed?: string | null;
 }
 
 const { appid, name, playtime_forever, lastPlayed } = Astro.props;
