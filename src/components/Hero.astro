@@ -13,16 +13,28 @@ const { profile } = Astro.props;
 
 <section class="hero">
   <div class="hero__avatar-wrapper">
-    <img class="hero__avatar" src={profile.avatar} alt="Avatar de Steam" width="112" height="112" />
+    <img
+      class="hero__avatar"
+      src={profile.avatar}
+      alt="Avatar de Steam"
+      width="112"
+      height="112"
+    />
   </div>
   <div class="hero__hours">
-    <span class="hero__hours-value">{profile.totalHours.toLocaleString('es-ES')}</span>
+    <span class="hero__hours-value"
+      >{profile.totalHours.toLocaleString("es-ES")}</span
+    >
   </div>
   <span class="hero__label">horas jugadas en steam</span>
   <div class="hero__meta">
     <span class="hero__meta-item">Nv. {profile.level}</span>
     <span class="hero__meta-sep">·</span>
-    <span class="hero__meta-item">{profile.accountAgeYears ?? 'N/A'}{profile.accountAgeYears !== null ? ' años' : ''}</span>
+    <span class="hero__meta-item"
+      >{profile.accountAgeYears ?? "N/A"}{
+        profile.accountAgeYears !== null ? " años" : ""
+      }</span
+    >
   </div>
 </section>
 
@@ -34,21 +46,33 @@ const { profile } = Astro.props;
 
   .hero__avatar-wrapper {
     margin: 0 auto var(--space-5);
-    width: 112px;
-    height: 112px;
+    width: 160px;
+    aspect-ratio: 1;
     border-radius: 50%;
     padding: 3px;
-    background: var(--color-accent);
-    box-shadow: 0 0 30px rgba(230, 175, 46, 0.35);
   }
 
   .hero__avatar {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 2.5rem;
     object-fit: cover;
     display: block;
     background-color: var(--color-bg);
+    corner-shape: notch;
+    transition: border-radius var(--transition);
+    outline: 0.5rem solid var(--color-accent);
+    outline-offset: 0.5rem;
+    box-shadow: 0px 0px 20px 20px
+      color-mix(
+        in srgb,
+        color-mix(in srgb, var(--color-accent), white 15%),
+        transparent 75%
+      );
+  }
+
+  .hero__avatar:hover {
+    border-radius: 1.5rem;
   }
 
   .hero__hours {
@@ -61,7 +85,7 @@ const { profile } = Astro.props;
   }
 
   .hero__hours-value {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: "Cinzel Decorative", serif;
     font-size: clamp(64px, 14vw, 160px);
     font-weight: 700;
     color: var(--color-accent);
