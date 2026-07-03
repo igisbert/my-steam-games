@@ -1,11 +1,26 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import GameGallery from '../components/GameGallery.astro';
+import { TOP_GAMES_COUNT } from '../config.js';
+import games from '../data/games.json';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const topGames = games.topGames.slice(0, TOP_GAMES_COUNT);
+const completedGames = games.completedGames;
 ---
 
 <Layout>
-	<Welcome />
+  <main>
+    <Hero />
+    <GameGallery title={`Top ${Math.min(TOP_GAMES_COUNT, games.topGames.length)} más jugados`} games={topGames} variant="top" />
+    <GameGallery title="Todos completados" games={completedGames} variant="completed" />
+  </main>
 </Layout>
+
+<style>
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-4) 0;
+  }
+</style>

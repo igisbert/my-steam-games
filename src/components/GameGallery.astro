@@ -1,0 +1,252 @@
+---
+import GameCardTop from './GameCardTop.astro';
+import GameCardCompleted from './GameCardCompleted.astro';
+
+interface Game {
+  appid: number;
+  name: string;
+  playtime_forever: number;
+  coverUrl?: string;
+}
+
+interface Props {
+  title: string;
+  games: Game[];
+  variant: 'top' | 'completed';
+}
+
+const { title, games, variant } = Astro.props;
+---
+
+<section class="gallery">
+  <div class="gallery__header">
+    <h2 class="gallery__title">{title}</h2>
+    {variant === 'completed' && (
+      <div class="gallery__sort">
+        <button class="gallery__sort-btn gallery__sort-btn--active" data-sort="name">🔤 Nombre</button>
+        <button class="gallery__sort-btn" data-sort="hours">⏱️ Horas</button>
+      </div>
+    )}
+  </div>
+  <div
+    class:list={['gallery__grid', variant === 'top' && 'gallery__grid--top']}
+    data-games={JSON.stringify(games)}
+  >
+    {games.map((game) => (
+      variant === 'top' ? (
+        <GameCardTop
+          appid={game.appid}
+          name={game.name}
+          playtime_forever={game.playtime_forever}
+        />
+      ) : (
+        <GameCardCompleted
+          appid={game.appid}
+          name={game.name}
+          playtime_forever={game.playtime_forever}
+          coverUrl={game.coverUrl || `https://cdn.cloudflare.steamstatic.com/steam/apps/${game.appid}/library_600x900.jpg`}
+        />
+      )
+    ))}
+  </div>
+</section>
+
+<script>
+  function initSort() {
+    document.querySelectorAll('.gallery').forEach((section) => {
+      const grid = section.querySelector('.gallery__grid[data-games]');
+      const buttons = section.querySelectorAll('.gallery__sort-btn');
+      if (!grid || !buttons.length) return;
+
+      const games = JSON.parse(grid.getAttribute('data-games') || '[]');
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          buttons.forEach((b) => b.classList.remove('gallery__sort-btn--active'));
+          btn.classList.add('gallery__sort-btn--active');
+
+          const sortKey = btn.getAttribute('data-sort');
+          const sorted = [...games].sort((a, b) => {
+            if (sortKey === 'name') return a.name.localeCompare(b.name);
+            return b.playtime_forever - a.playtime_forever;
+          });
+
+          renderGrid(grid as HTMLElement, sorted);
+        });
+      });
+    });
+  }
+
+  function renderGrid(grid: HTMLElement, games: { appid: number; name: string; playtime_forever: number; coverUrl?: string }[]) {
+    const cards = games.map((game) => {
+      const hours = game.playtime_forever > 0 ? Math.floor(game.playtime_forever / 60) : null;
+      const hoursText = hours !== null ? `${hours.toLocaleString('es-ES')}h` : 'Horas no disponibles';
+      const coverUrl = game.coverUrl || `https://cdn.cloudflare.steamstatic.com/steam/apps/${game.appid}/library_600x900.jpg`;
+      const article = document.createElement('article');
+      article.className = 'game-card-completed';
+      article.tabIndex = 0;
+      article.innerHTML = `
+        <div class="game-card-completed__image-wrapper">
+          <img class="game-card-completed__image" src="${coverUrl}" alt="Portada de ${game.name}" loading="lazy" width="300" height="450" />
+        </div>
+        <div class="game-card-completed__info">
+          <h3 class="game-card-completed__name">${game.name}</h3>
+          <span class="game-card-completed__hours">${hoursText}</span>
+        </div>
+      `;
+      return article;
+    });
+    grid.innerHTML = '';
+    cards.forEach((card) => grid.appendChild(card));
+  }
+
+  document.addEventListener('astro:page-load', initSort);
+  initSort();
+</script>
+
+<style>
+  .gallery {
+    padding: 0 var(--space-5) var(--space-6);
+  }
+
+  .gallery__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+  }
+
+  .gallery__title {
+    margin: 0;
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+  }
+
+  .gallery__sort {
+    display: flex;
+    gap: var(--space-2);
+  }
+
+  .gallery__sort-btn {
+    background: var(--color-surface);
+    color: var(--color-primary);
+    border: none;
+    border-radius: var(--radius);
+    padding: var(--space-1) var(--space-3);
+    font-family: var(--font-family);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: background var(--transition),
+                color var(--transition);
+  }
+
+  .gallery__sort-btn:hover {
+    background: var(--color-muted);
+  }
+
+  .gallery__sort-btn--active {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  .gallery__sort-btn:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  .gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .gallery__grid--top {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-4);
+  }
+
+  @media (max-width: 768px) {
+    .gallery__grid {
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: var(--space-3);
+    }
+
+    .gallery__grid--top {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-2);
+    }
+
+    .gallery__grid--top {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<style is:global>
+  .game-card-completed {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: box-shadow var(--transition),
+                transform var(--transition);
+  }
+
+  .game-card-completed:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+  }
+
+  .game-card-completed:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  .game-card-completed__image-wrapper {
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    background-color: var(--color-muted);
+  }
+
+  .game-card-completed__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .game-card-completed__info {
+    padding: var(--space-2) var(--space-2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .game-card-completed__name {
+    margin: 0;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-primary);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .game-card-completed__hours {
+    font-size: var(--text-xs);
+    color: var(--color-accent);
+    font-weight: 400;
+  }
+</style>
