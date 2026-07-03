@@ -26,7 +26,29 @@ function parseGame(g) {
     appid: g.appid,
     name: g.name,
     playtime_forever: g.playtime_forever,
+    lastPlayed: formatLastPlayed(g.rtime_last_played),
   };
+}
+
+function formatLastPlayed(timestamp) {
+  if (!timestamp) return null;
+  const now = Date.now() / 1000;
+  const diff = now - timestamp;
+  const minutes = Math.floor(diff / 60);
+  const hours = Math.floor(diff / 3600);
+  const days = Math.floor(diff / 86400);
+  const months = Math.floor(diff / (30.44 * 86400));
+  const years = Math.floor(diff / (365.25 * 86400));
+
+  if (minutes < 1) return 'Ahora mismo';
+  if (minutes < 60) return `Hace ${minutes} min`;
+  if (hours < 24) return `Hace ${hours}h`;
+  if (days === 1) return 'Ayer';
+  if (days < 30) return `Hace ${days} días`;
+  if (months === 1) return 'Hace 1 mes';
+  if (months < 12) return `Hace ${months} meses`;
+  if (years === 1) return 'Hace 1 año';
+  return `Hace ${years} años`;
 }
 
 async function fetchTSV() {

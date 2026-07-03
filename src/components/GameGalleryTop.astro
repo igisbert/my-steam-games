@@ -5,6 +5,7 @@ interface Game {
   appid: number;
   name: string;
   playtime_forever: number;
+  lastPlayed: string | null;
 }
 
 interface Props {
@@ -25,6 +26,7 @@ const { title, games } = Astro.props;
         appid={game.appid}
         name={game.name}
         playtime_forever={game.playtime_forever}
+        lastPlayed={game.lastPlayed}
       />
     ))}
   </div>

@@ -4,9 +4,10 @@ interface Props {
   name: string;
   playtime_forever: number;
   coverUrl: string;
+  lastPlayed: string | null;
 }
 
-const { appid, name, playtime_forever, coverUrl } = Astro.props;
+const { appid, name, playtime_forever, coverUrl, lastPlayed } = Astro.props;
 
 const hours = playtime_forever > 0 ? Math.floor(playtime_forever / 60) : null;
 const hoursText = hours !== null ? `${hours.toLocaleString('es-ES')}h` : 'Horas no disponibles';
@@ -27,6 +28,7 @@ const altText = `Portada de ${name}`;
   <div class="game-card-completed__info">
     <h3 class="game-card-completed__name">{name}</h3>
     <span class="game-card-completed__hours">{hoursText}</span>
+    {lastPlayed && <span class="game-card-completed__last-played">{lastPlayed}</span>}
   </div>
 </article>
 
@@ -82,5 +84,11 @@ const altText = `Portada de ${name}`;
     font-size: var(--text-xs);
     color: var(--color-accent);
     font-weight: 400;
+  }
+
+  .game-card-completed__last-played {
+    font-size: var(--text-xs);
+    color: var(--color-primary);
+    opacity: 0.5;
   }
 </style>
