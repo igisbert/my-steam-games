@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import GameGalleryTop from '../components/GameGalleryTop.astro';
-import GameGalleryCompleted from '../components/GameGalleryCompleted.astro';
-import { TOP_GAMES_COUNT } from '../config.js';
-import games from '../data/games.json';
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/components/Hero.astro';
+import GameGalleryTop from '@/components/GameGalleryTop.astro';
+import GameGalleryCompleted from '@/components/GameGalleryCompleted.astro';
+import { TOP_GAMES_COUNT } from '@/config.js';
+import games from '@/data/games.json';
 
 const topGames = games.topGames.slice(0, TOP_GAMES_COUNT);
 const completedGames = games.completedGames;
