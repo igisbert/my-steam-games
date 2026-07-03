@@ -1,9 +1,33 @@
 ---
+interface Props {
+  profile: {
+    avatar: string;
+    level: number;
+    totalHours: number;
+    accountAgeYears: number | null;
+  };
+}
+
+const { profile } = Astro.props;
 ---
 
 <section class="hero">
+  <img class="hero__avatar" src={profile.avatar} alt="Avatar de Steam" width="128" height="128" />
   <h1>Portfolio de Iñaki</h1>
-  <p>Juegos completados en Steam</p>
+  <div class="hero__stats">
+    <span class="hero__stat">
+      <span class="hero__stat-value">{profile.totalHours.toLocaleString('es-ES')}h</span>
+      <span class="hero__stat-label">jugadas</span>
+    </span>
+    <span class="hero__stat">
+      <span class="hero__stat-value">Nv. {profile.level}</span>
+      <span class="hero__stat-label">Steam</span>
+    </span>
+    <span class="hero__stat">
+      <span class="hero__stat-value">{profile.accountAgeYears ?? 'N/A'}</span>
+      <span class="hero__stat-label">{profile.accountAgeYears !== null ? 'años' : ''}</span>
+    </span>
+  </div>
 </section>
 
 <style>
@@ -12,18 +36,45 @@
     padding: var(--space-6) var(--space-5);
   }
 
+  .hero__avatar {
+    margin: 0 auto var(--space-4);
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border: 3px solid var(--color-accent);
+  }
+
   h1 {
-    margin: 0 0 var(--space-2);
+    margin: 0 0 var(--space-3);
     font-size: var(--text-3xl);
     font-weight: 700;
     color: var(--color-primary);
     letter-spacing: -0.02em;
   }
 
-  p {
-    margin: 0;
+  .hero__stats {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-5);
+  }
+
+  .hero__stat {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .hero__stat-value {
     font-size: var(--text-lg);
+    font-weight: 700;
     color: var(--color-accent);
+  }
+
+  .hero__stat-label {
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+    opacity: 0.7;
   }
 
   @media (max-width: 768px) {
@@ -31,8 +82,13 @@
       font-size: var(--text-2xl);
     }
 
-    p {
-      font-size: var(--text-base);
+    .hero__stats {
+      gap: var(--space-4);
+    }
+
+    .hero__avatar {
+      width: 96px;
+      height: 96px;
     }
   }
 </style>

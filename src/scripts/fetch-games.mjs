@@ -68,6 +68,44 @@ async function fetchTSV() {
   return [...unique.values()];
 }
 
+async function fetchPlayerSummary() {
+  console.log('Fetching player summary...');
+  const url = new URL('https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/');
+  url.searchParams.set('key', STEAM_API_KEY);
+  url.searchParams.set('steamids', STEAM_ID);
+
+  const res = await fetch(url);
+  if (!res.ok) {
+    console.warn(`Steam GetPlayerSummaries error: ${res.status}`);
+    return null;
+  }
+  const data = await res.json();
+  const player = data?.response?.players?.[0];
+  if (!player) {
+    console.warn('No player data found');
+    return null;
+  }
+  return {
+    avatar: player.avatarfull || '',
+    timecreated: player.timecreated || null,
+  };
+}
+
+async function fetchPlayerLevel() {
+  console.log('Fetching player level...');
+  const url = new URL('https://api.steampowered.com/IPlayerService/GetSteamLevel/v1/');
+  url.searchParams.set('key', STEAM_API_KEY);
+  url.searchParams.set('steamid', STEAM_ID);
+
+  const res = await fetch(url);
+  if (!res.ok) {
+    console.warn(`Steam GetSteamLevel error: ${res.status}`);
+    return 0;
+  }
+  const data = await res.json();
+  return data?.response?.player_level || 0;
+}
+
 async function fetchOwnedGames() {
   console.log('Fetching owned games from Steam API...');
   const url = new URL('https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/');
@@ -193,11 +231,36 @@ async function resolveCoverUrls(completedGames) {
   }
 }
 
+function buildProfile(ownedGames, summary, level) {
+  const totalMinutes = ownedGames.reduce((sum, g) => sum + (g.playtime_forever || 0), 0);
+  const totalHours = Math.round(totalMinutes / 60);
+
+  let accountAgeYears = null;
+  if (summary?.timecreated) {
+    const nowSec = Date.now() / 1000;
+    accountAgeYears = Math.floor((nowSec - summary.timecreated) / (365.25 * 86400));
+  }
+
+  return {
+    avatar: summary?.avatar || '',
+    level,
+    totalHours,
+    accountAgeYears,
+  };
+}
+
 async function main() {
   try {
     const tsvGames = await fetchTSV();
     const ownedGames = await fetchOwnedGames();
+
+    const [summary, level] = await Promise.all([
+      fetchPlayerSummary(),
+      fetchPlayerLevel(),
+    ]);
+
     const data = buildData(tsvGames, ownedGames);
+    data.profile = buildProfile(ownedGames, summary, level);
 
     await resolveCoverUrls(data.completedGames);
     data.completedGames.sort((a, b) => a.name.localeCompare(b.name));
@@ -207,6 +270,7 @@ async function main() {
     const outPath = join(outDir, 'games.json');
     writeFileSync(outPath, JSON.stringify(data, null, 2));
     console.log(`\nGenerated ${outPath}`);
+    console.log(`  - Profile: level ${data.profile.level}, ${data.profile.totalHours}h, ${data.profile.accountAgeYears ?? 'N/A'} years`);
     console.log(`  - Top games (all library): ${data.topGames.length}`);
     console.log(`  - Completed games (from Sheet): ${data.completedGames.length}`);
   } catch (err) {

@@ -1076,6 +1076,11 @@
       "playtime_forever": 104
     },
     {
+      "appid": 1580180,
+      "name": "Gunbrella",
+      "playtime_forever": 103
+    },
+    {
       "appid": 225540,
       "name": "Just Cause 3",
       "playtime_forever": 100
@@ -1218,11 +1223,6 @@
     {
       "appid": 47790,
       "name": "Medal of Honor(TM) Single Player",
-      "playtime_forever": 73
-    },
-    {
-      "appid": 1580180,
-      "name": "Gunbrella",
       "playtime_forever": 73
     },
     {
@@ -2742,5 +2742,11 @@
     2138330,
     774361,
     1245620
-  ]
+  ],
+  "profile": {
+    "avatar": "https://avatars.steamstatic.com/d04cb56455fd379dd68d3b86329fbb293033f606_full.jpg",
+    "level": 80,
+    "totalHours": 10214,
+    "accountAgeYears": 14
+  }
 }
