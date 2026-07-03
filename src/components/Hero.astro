@@ -26,16 +26,7 @@ const { profile } = Astro.props;
       >{profile.totalHours.toLocaleString("es-ES")}</span
     >
   </div>
-  <span class="hero__label">horas jugadas en steam</span>
-  <div class="hero__meta">
-    <span class="hero__meta-item">Nv. {profile.level}</span>
-    <span class="hero__meta-sep">·</span>
-    <span class="hero__meta-item"
-      >{profile.accountAgeYears ?? "N/A"}{
-        profile.accountAgeYears !== null ? " años" : ""
-      }</span
-    >
-  </div>
+  <span class="hero__label">horas jugadas en steam<br>durante <span class="hero__label-accent">{profile.accountAgeYears ?? "N/A"}</span>{profile.accountAgeYears !== null ? " años" : ""}</span>
 </section>
 
 <style>
@@ -104,21 +95,9 @@ const { profile } = Astro.props;
     opacity: 0.4;
   }
 
-  .hero__meta {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--space-2);
-    margin-top: var(--space-5);
-    padding: var(--space-2) var(--space-4);
-    border: 1px solid rgba(230, 175, 46, 0.4);
-    border-radius: 999px;
-    font-size: var(--text-sm);
+  .hero__label-accent {
     color: var(--color-accent);
-    box-shadow: 0 0 12px rgba(230, 175, 46, 0.15);
+    opacity: 1;
   }
 
-  .hero__meta-sep {
-    font-size: var(--text-xs);
-  }
 </style>
