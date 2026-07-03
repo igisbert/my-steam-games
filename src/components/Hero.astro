@@ -37,6 +37,22 @@ const { profile } = Astro.props;
   .hero {
     text-align: center;
     padding: clamp(60px, 10vw, 100px) var(--space-5) clamp(80px, 12vw, 120px);
+    animation: heroScroll linear both;
+    animation-timeline: scroll(block);
+    animation-range: 5rem 20rem;
+  }
+
+  @keyframes heroScroll {
+    0% {
+      transform: scale(1);
+      filter: blur(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.7) translateY(30px);
+      filter: blur(4px);
+      opacity: 0.3;
+    }
   }
 
   .hero__avatar-wrapper {
