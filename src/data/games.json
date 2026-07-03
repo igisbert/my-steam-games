@@ -643,6 +643,12 @@
       "lastPlayed": "Hace 9 años"
     },
     {
+      "appid": 1580180,
+      "name": "Gunbrella",
+      "playtime_forever": 490,
+      "lastPlayed": "Ahora mismo"
+    },
+    {
       "appid": 519860,
       "name": "DUSK",
       "playtime_forever": 476,
@@ -677,12 +683,6 @@
       "name": "NBA 2K17",
       "playtime_forever": 415,
       "lastPlayed": "Hace 7 años"
-    },
-    {
-      "appid": 1580180,
-      "name": "Gunbrella",
-      "playtime_forever": 403,
-      "lastPlayed": "Hace 20 min"
     },
     {
       "appid": 78000,
@@ -1192,7 +1192,7 @@
       "appid": 934700,
       "name": "Dead Island 2",
       "playtime_forever": 125,
-      "lastPlayed": "Hace 4 días"
+      "lastPlayed": "Hace 5 días"
     },
     {
       "appid": 211820,
@@ -2956,12 +2956,6 @@
       "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg"
     },
     {
-      "appid": 2138330,
-      "name": "Cyberpunk 2077: Phantom Liberty",
-      "playtime_forever": 0,
-      "coverUrl": "https://cdn2.steamgriddb.com/grid/8b69d3d879cf6a6766dece6a8df9eb63.png"
-    },
-    {
       "appid": 606280,
       "name": "Darksiders III",
       "playtime_forever": 1429,
@@ -3078,6 +3072,13 @@
       "playtime_forever": 1132,
       "lastPlayed": "Hace 3 años",
       "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1097840/library_600x900.jpg"
+    },
+    {
+      "appid": 1580180,
+      "name": "Gunbrella",
+      "playtime_forever": 490,
+      "lastPlayed": "Ahora mismo",
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1580180/library_600x900.jpg"
     },
     {
       "appid": 220,
@@ -3270,14 +3271,13 @@
     }
   ],
   "missingGames": [
-    2138330,
     774361,
     1245620
   ],
   "profile": {
     "avatar": "https://avatars.steamstatic.com/d04cb56455fd379dd68d3b86329fbb293033f606_full.jpg",
     "level": 80,
-    "totalHours": 10219,
+    "totalHours": 10220,
     "accountAgeYears": 14
   }
 }

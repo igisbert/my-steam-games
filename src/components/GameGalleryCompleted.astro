@@ -97,6 +97,7 @@ const { title, games } = Astro.props;
   }
 
   .gallery__header {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,31 +115,41 @@ const { title, games } = Astro.props;
   }
 
   .gallery__sort {
+    position: absolute;
+    right: 0;
+    top: 0;
     display: flex;
     gap: var(--space-2);
   }
 
   .gallery__sort-btn {
-    background: var(--color-surface);
+    background: transparent;
     color: var(--color-primary);
-    border: none;
+    border: 1px solid rgba(245, 237, 240, 0.15);
     border-radius: var(--radius);
     padding: var(--space-1) var(--space-3);
     font-family: var(--font-family);
     font-size: var(--text-sm);
     cursor: pointer;
-    transition:
-      background var(--transition),
-      color var(--transition);
+    transition: background var(--transition),
+                color var(--transition),
+                border-color var(--transition);
   }
 
   .gallery__sort-btn:hover {
-    background: var(--color-muted);
+    background: rgba(245, 237, 240, 0.05);
+    border-color: rgba(245, 237, 240, 0.3);
   }
 
   .gallery__sort-btn--active {
     background: var(--color-accent);
     color: var(--color-bg);
+    border-color: var(--color-accent);
+  }
+
+  .gallery__sort-btn--active:hover {
+    background: var(--color-accent);
+    opacity: 0.9;
   }
 
   .gallery__sort-btn:focus-visible {
