@@ -26,7 +26,11 @@ const { profile } = Astro.props;
       >{profile.totalHours.toLocaleString("es-ES")}</span
     >
   </div>
-  <span class="hero__label">horas jugadas en steam<br>durante <span class="hero__label-accent">{profile.accountAgeYears ?? "N/A"}</span>{profile.accountAgeYears !== null ? " años" : ""}</span>
+  <span class="hero__label"
+    >horas jugadas en steam<br />durante <span class="hero__label-accent"
+      >{profile.accountAgeYears ?? "N/A"}</span
+    >{profile.accountAgeYears !== null ? " años" : ""}</span
+  >
 </section>
 
 <style>
@@ -92,12 +96,11 @@ const { profile } = Astro.props;
     text-transform: uppercase;
     letter-spacing: 0.3em;
     color: var(--color-primary);
-    opacity: 0.4;
+    opacity: 0.6;
   }
 
   .hero__label-accent {
     color: var(--color-accent);
     opacity: 1;
   }
-
 </style>

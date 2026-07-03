@@ -44,6 +44,13 @@ const altText = `Portada de ${name}`;
                 transform var(--transition);
   }
 
+  @supports (corner-shape: squircle) {
+    .game-card-completed {
+      border-radius: 1.5rem;
+      corner-shape: squircle;
+    }
+  }
+
   .game-card-completed:focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;

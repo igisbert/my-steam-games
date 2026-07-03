@@ -134,6 +134,7 @@ async function fetchOwnedGames() {
   url.searchParams.set('key', STEAM_API_KEY);
   url.searchParams.set('steamid', STEAM_ID);
   url.searchParams.set('include_appinfo', 'true');
+  url.searchParams.set('include_played_free_games', 'true');
   url.searchParams.set('format', 'json');
 
   const res = await fetch(url);
