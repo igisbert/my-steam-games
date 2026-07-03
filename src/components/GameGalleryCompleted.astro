@@ -1,5 +1,5 @@
 ---
-import GameCardCompleted from '@/components/GameCardCompleted.astro';
+import GameCardCompleted from "@/components/GameCardCompleted.astro";
 
 interface Game {
   appid: number;
@@ -21,44 +21,64 @@ const { title, games } = Astro.props;
   <div class="gallery__header">
     <h2 class="gallery__title">{title}</h2>
     <div class="gallery__sort">
-      <button class="gallery__sort-btn gallery__sort-btn--active" data-sort="name">🔤 Nombre</button>
+      <button
+        class="gallery__sort-btn gallery__sort-btn--active"
+        data-sort="name">🔤 Nombre</button
+      >
       <button class="gallery__sort-btn" data-sort="hours">⏱️ Horas</button>
     </div>
   </div>
   <div class="gallery__grid">
-    {games.map((game) => (
-      <GameCardCompleted
-        appid={game.appid}
-        name={game.name}
-        playtime_forever={game.playtime_forever}
-        coverUrl={game.coverUrl || `https://cdn.cloudflare.steamstatic.com/steam/apps/${game.appid}/library_600x900.jpg`}
-        lastPlayed={game.lastPlayed}
-      />
-    ))}
+    {
+      games.map((game) => (
+        <GameCardCompleted
+          appid={game.appid}
+          name={game.name}
+          playtime_forever={game.playtime_forever}
+          coverUrl={
+            game.coverUrl ||
+            `https://cdn.cloudflare.steamstatic.com/steam/apps/${game.appid}/library_600x900.jpg`
+          }
+          lastPlayed={game.lastPlayed}
+        />
+      ))
+    }
   </div>
 </section>
 
 <script>
   function initSort() {
-    document.querySelectorAll('.gallery').forEach((section) => {
-      const grid = section.querySelector('.gallery__grid');
-      const buttons = section.querySelectorAll('.gallery__sort-btn');
+    document.querySelectorAll(".gallery").forEach((section) => {
+      const grid = section.querySelector(".gallery__grid");
+      const buttons = section.querySelectorAll(".gallery__sort-btn");
       if (!grid || !buttons.length) return;
 
       buttons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          buttons.forEach((b) => b.classList.remove('gallery__sort-btn--active'));
-          btn.classList.add('gallery__sort-btn--active');
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) =>
+            b.classList.remove("gallery__sort-btn--active"),
+          );
+          btn.classList.add("gallery__sort-btn--active");
 
-          const sortKey = btn.getAttribute('data-sort');
+          const sortKey = btn.getAttribute("data-sort");
           const cards = [...grid.children];
           cards.sort((a, b) => {
-            const aName = a.querySelector('.game-card-completed__name')?.textContent || '';
-            const bName = b.querySelector('.game-card-completed__name')?.textContent || '';
-            const aHours = parseInt(a.querySelector('.game-card-completed__hours')?.textContent || '0') || 0;
-            const bHours = parseInt(b.querySelector('.game-card-completed__hours')?.textContent || '0') || 0;
+            const aName =
+              a.querySelector(".game-card-completed__name")?.textContent || "";
+            const bName =
+              b.querySelector(".game-card-completed__name")?.textContent || "";
+            const aHours =
+              parseInt(
+                a.querySelector(".game-card-completed__hours")?.textContent ||
+                  "0",
+              ) || 0;
+            const bHours =
+              parseInt(
+                b.querySelector(".game-card-completed__hours")?.textContent ||
+                  "0",
+              ) || 0;
 
-            if (sortKey === 'name') return aName.localeCompare(bName);
+            if (sortKey === "name") return aName.localeCompare(bName);
             return bHours - aHours;
           });
           cards.forEach((card) => grid.appendChild(card));
@@ -67,7 +87,7 @@ const { title, games } = Astro.props;
     });
   }
 
-  document.addEventListener('astro:page-load', initSort);
+  document.addEventListener("astro:page-load", initSort);
   initSort();
 </script>
 
@@ -86,10 +106,11 @@ const { title, games } = Astro.props;
 
   .gallery__title {
     margin: 0;
+    font-family: "Cinzel Decorative", serif;
     font-size: var(--text-xl);
     font-weight: 700;
-    color: var(--color-primary);
-    text-align: center;
+    color: var(--color-accent);
+    text-shadow: 0 0 20px rgba(230, 175, 46, 0.3);
   }
 
   .gallery__sort {
@@ -106,8 +127,9 @@ const { title, games } = Astro.props;
     font-family: var(--font-family);
     font-size: var(--text-sm);
     cursor: pointer;
-    transition: background var(--transition),
-                color var(--transition);
+    transition:
+      background var(--transition),
+      color var(--transition);
   }
 
   .gallery__sort-btn:hover {
@@ -126,7 +148,7 @@ const { title, games } = Astro.props;
 
   .gallery__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: var(--space-4);
   }
 
@@ -153,8 +175,9 @@ const { title, games } = Astro.props;
     background-color: var(--color-surface);
     border-radius: var(--radius);
     overflow: hidden;
-    transition: box-shadow var(--transition),
-                transform var(--transition);
+    transition:
+      box-shadow var(--transition),
+      transform var(--transition);
   }
 
   .game-card-completed:focus-visible {
