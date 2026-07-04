@@ -1,5 +1,6 @@
 ---
 import tagIcon from "@/assets/icons/tag.svg?raw";
+import Tag from "@/components/Tag.astro";
 
 interface Props {
   tags: string[];
@@ -18,7 +19,7 @@ const { tags, mobileTop = false } = Astro.props;
   />
   <div class="tag-trigger__panel" hidden>
     <div class="tag-trigger__tags">
-      {tags.map((tag) => <span class="tag-trigger__pill">{tag}</span>)}
+      {tags.map((tag) => <Tag label={tag} />)}
     </div>
   </div>
 </div>
@@ -128,18 +129,6 @@ const { tags, mobileTop = false } = Astro.props;
     justify-content: center;
   }
 
-  .tag-trigger__pill {
-    font-size: 1rem;
-    color: var(--color-surface);
-    opacity: 0.9;
-    background: var(--color-accent);
-    padding: 3px 8px;
-    border-radius: 999px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
   @media (max-width: 480px) {
     .tag-trigger--mobile-top {
       top: 6px;
@@ -153,7 +142,7 @@ const { tags, mobileTop = false } = Astro.props;
       max-width: 150px;
     }
 
-    .tag-trigger__pill {
+    :global(.tag) {
       font-size: 0.9rem;
     }
   }
