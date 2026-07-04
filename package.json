@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "fetch": "node --env-file=.env src/scripts/fetch-games.mjs",
+    "fetch": "node src/scripts/fetch-games.mjs",
     "build": "npm run fetch && astro build",
     "preview": "astro preview",
     "astro": "astro"
