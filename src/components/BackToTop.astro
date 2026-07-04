@@ -28,10 +28,10 @@ import upIcon from "@/assets/icons/up.svg?raw";
 <style>
   .back-to-top {
     position: fixed;
-    bottom: var(--space-5);
-    right: var(--space-5);
-    width: 44px;
-    height: 44px;
+    bottom: var(--space-3);
+    right: var(--space-3);
+    width: 32px;
+    aspect-ratio: 1;
     display: grid;
     place-items: center;
     background: var(--color-accent);
@@ -39,7 +39,10 @@ import upIcon from "@/assets/icons/up.svg?raw";
     border-radius: var(--radius);
     color: var(--color-bg);
     cursor: pointer;
-    transition: opacity var(--transition), transform var(--transition), background var(--transition);
+    transition:
+      opacity var(--transition),
+      transform var(--transition),
+      background var(--transition);
     z-index: 100;
   }
 

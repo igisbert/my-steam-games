@@ -18,7 +18,7 @@ const { tags, mobileTop = false } = Astro.props;
   />
   <div class="tag-trigger__panel" hidden>
     <div class="tag-trigger__tags">
-      {tags.map(tag => <span class="tag-trigger__pill">{tag}</span>)}
+      {tags.map((tag) => <span class="tag-trigger__pill">{tag}</span>)}
     </div>
   </div>
 </div>
@@ -29,7 +29,7 @@ const { tags, mobileTop = false } = Astro.props;
 
     triggers.forEach((trigger) => {
       const btn = trigger.querySelector(".tag-trigger__btn");
-      const panel = trigger.querySelector(".tag-trigger__panel");
+      const panel = trigger.querySelector(".tag-trigger__panel") as HTMLElement;
       if (!btn || !panel) return;
 
       btn.addEventListener("click", (e) => {
@@ -37,7 +37,7 @@ const { tags, mobileTop = false } = Astro.props;
         const isOpen = !panel.hidden;
 
         document.querySelectorAll(".tag-trigger__panel").forEach((p) => {
-          p.hidden = true;
+          (p as HTMLElement).hidden = true;
           p.previousElementSibling?.setAttribute("aria-expanded", "false");
         });
 
@@ -50,7 +50,7 @@ const { tags, mobileTop = false } = Astro.props;
 
     document.addEventListener("click", () => {
       document.querySelectorAll(".tag-trigger__panel").forEach((p) => {
-        p.hidden = true;
+        (p as HTMLElement).hidden = true;
         p.previousElementSibling?.setAttribute("aria-expanded", "false");
       });
     });
@@ -58,7 +58,7 @@ const { tags, mobileTop = false } = Astro.props;
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         document.querySelectorAll(".tag-trigger__panel").forEach((p) => {
-          p.hidden = true;
+          (p as HTMLElement).hidden = true;
           p.previousElementSibling?.setAttribute("aria-expanded", "false");
         });
       }
@@ -84,12 +84,15 @@ const { tags, mobileTop = false } = Astro.props;
     width: 32px;
     height: 32px;
     background: var(--color-surface);
-    border: 1px solid rgba(245, 237, 240, 0.1);
+    border: 2px solid rgba(245, 237, 240, 0.1);
     border-radius: 50%;
     color: var(--color-primary);
     opacity: 0.6;
     cursor: pointer;
-    transition: opacity var(--transition), border-color var(--transition), color var(--transition);
+    transition:
+      opacity var(--transition),
+      border-color var(--transition),
+      color var(--transition);
   }
 
   .tag-trigger__btn :global(svg) {

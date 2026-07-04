@@ -1,29 +1,68 @@
 ---
+import QuoteIcon from "@/assets/icons/quote.svg";
 ---
 
 <footer class="footer">
-  <p class="footer__main">Casi ningún derecho reservado</p>
-  <p class="footer__sub">Hecho con cariño · Gracias a Valve por la API</p>
+  <div class="jokecontainer">
+    <span class="icon">
+      <QuoteIcon />
+    </span>
+    <p class="joke"></p>
+    <span class="icon">
+      <QuoteIcon />
+    </span>
+  </div>
+  <p class="footer__sub">Agradecimientos a Valve, SteamGridDB y SteamSpy</p>
 </footer>
 
 <style>
   .footer {
     width: 100%;
     text-align: center;
-    padding: 1rem;
+    padding: 1.75rem;
     background: var(--color-accent);
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
+    margin-top: var(--space-6);
   }
 
-  .footer__main {
+  .jokecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    opacity: 0.95;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: var(--color-bg);
+
+    @media (width <= 568px) {
+      display: none;
+    }
+  }
+
+  .icon:first-child {
+    transform: rotate(180deg);
+  }
+
+  .joke {
     margin: 0;
     margin-block: 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-size: var(--text-base);
     font-weight: 700;
     color: var(--color-bg);
+    font-size: var(--text-lg);
+    text-wrap: balance;
+    width: fit-content;
+    font-style: italic;
   }
 
   .footer__sub {
@@ -35,3 +74,20 @@
     opacity: 0.7;
   }
 </style>
+
+<script>
+  const jokes = [
+    "Logro desbloqueado: ¡has llegado al final de la página!",
+    "100% libre de microtransacciones",
+    "Las cookies se clican, no se aceptan",
+    "Este sitio web no tiene DLCs",
+    "Mira dos anuncios para seguir navegando",
+    "Por la gloria de Gabe Newell",
+    "You died",
+  ];
+
+  const joke = jokes[Math.floor(Math.random() * jokes.length)];
+
+  const jokeElement = document.querySelector(".joke") as HTMLElement;
+  jokeElement.textContent = joke;
+</script>
