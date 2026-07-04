@@ -1,5 +1,5 @@
 ---
-import Tag from '@/components/Tag.astro';
+import TagPanel from '@/components/TagPanel.astro';
 
 interface Props {
   appid: number;
@@ -38,11 +38,7 @@ const altText = `Portada de ${name}`;
         )
       }
     </div>
-    {tags && tags.length > 0 && (
-      <div class="game-card-top__tags">
-        {tags.map(tag => <Tag label={tag} />)}
-      </div>
-    )}
+    {tags && tags.length > 0 && <TagPanel tags={tags} />}
   </div>
 </article>
 
@@ -54,7 +50,6 @@ const altText = `Portada de ${name}`;
     background-color: var(--color-surface);
     border: 6px solid var(--color-surface);
     border-radius: var(--radius);
-    overflow: hidden;
     transition:
       box-shadow var(--transition),
       transform var(--transition);
@@ -107,11 +102,11 @@ const altText = `Portada de ${name}`;
   }
 
   .game-card-top__info {
-    padding: var(--space-2) 0.5rem;
+    padding: var(--space-3) 0.5rem;
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: var(--space-2);
+    gap: var(--space-3);
   }
 
   .game-card-top__name {
@@ -158,12 +153,5 @@ const altText = `Portada de ${name}`;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-left: var(--space-2);
-  }
-
-  .game-card-top__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-top: var(--space-1);
   }
 </style>

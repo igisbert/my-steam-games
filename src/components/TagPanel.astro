@@ -1,0 +1,136 @@
+---
+import tagIcon from "@/assets/icons/tag.svg?raw";
+
+interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+<div class="tag-trigger">
+  <button
+    class="tag-trigger__btn"
+    aria-expanded="false"
+    aria-label="Ver etiquetas"
+    set:html={tagIcon}
+  />
+  <div class="tag-trigger__panel" hidden>
+    <div class="tag-trigger__tags">
+      {tags.map(tag => <span class="tag-trigger__pill">{tag}</span>)}
+    </div>
+  </div>
+</div>
+
+<script>
+  function initTagPanels() {
+    const triggers = document.querySelectorAll(".tag-trigger");
+
+    triggers.forEach((trigger) => {
+      const btn = trigger.querySelector(".tag-trigger__btn");
+      const panel = trigger.querySelector(".tag-trigger__panel");
+      if (!btn || !panel) return;
+
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = !panel.hidden;
+
+        document.querySelectorAll(".tag-trigger__panel").forEach((p) => {
+          p.hidden = true;
+          p.previousElementSibling?.setAttribute("aria-expanded", "false");
+        });
+
+        if (!isOpen) {
+          panel.hidden = false;
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    document.addEventListener("click", () => {
+      document.querySelectorAll(".tag-trigger__panel").forEach((p) => {
+        p.hidden = true;
+        p.previousElementSibling?.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        document.querySelectorAll(".tag-trigger__panel").forEach((p) => {
+          p.hidden = true;
+          p.previousElementSibling?.setAttribute("aria-expanded", "false");
+        });
+      }
+    });
+  }
+
+  document.addEventListener("astro:page-load", initTagPanels);
+  initTagPanels();
+</script>
+
+<style>
+  .tag-trigger {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  .tag-trigger__btn {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    background: var(--color-surface);
+    border: 1px solid rgba(245, 237, 240, 0.1);
+    border-radius: 50%;
+    color: var(--color-primary);
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity var(--transition), border-color var(--transition), color var(--transition);
+  }
+
+  .tag-trigger__btn :global(svg) {
+    width: 16px;
+    height: 16px;
+  }
+
+  .tag-trigger__btn[aria-expanded="true"] {
+    opacity: 1;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  .tag-trigger__panel {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    min-width: 160px;
+    max-width: 220px;
+    background: var(--color-surface);
+    border: 1px solid #f5edf01f;
+    border-radius: var(--radius);
+    padding: var(--space-4);
+    box-shadow: 0px 5px 20px 2px #00000073;
+  }
+
+  .tag-trigger__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .tag-trigger__pill {
+    font-size: 1rem;
+    color: var(--color-surface);
+    opacity: 0.9;
+    background: var(--color-accent);
+    padding: 3px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+</style>
