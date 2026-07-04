@@ -22,8 +22,8 @@ const { profile } = Astro.props;
     />
   </div>
   <div class="hero__hours">
-    <span class="hero__hours-value"
-      >{profile.totalHours.toLocaleString("es-ES")}</span
+    <h1 class="hero__hours-value"
+      >{profile.totalHours.toLocaleString("es-ES")}</h1
     >
   </div>
   <span class="hero__label"
@@ -70,7 +70,6 @@ const { profile } = Astro.props;
     object-fit: cover;
     display: block;
     background-color: var(--color-bg);
-    corner-shape: notch;
     transition: border-radius var(--transition);
     outline: 0.5rem solid var(--color-accent);
     outline-offset: 0.5rem;
@@ -80,6 +79,12 @@ const { profile } = Astro.props;
         color-mix(in srgb, var(--color-accent), white 15%),
         transparent 75%
       );
+  }
+
+  @supports (corner-shape: notch) {
+    .hero__avatar {
+      corner-shape: notch;
+    }
   }
 
   .hero__avatar:hover {
@@ -96,6 +101,7 @@ const { profile } = Astro.props;
   }
 
   .hero__hours-value {
+    margin: 0;
     font-family: "Cinzel Decorative", serif;
     font-size: clamp(100px, 14vw, 160px);
     font-weight: 700;
