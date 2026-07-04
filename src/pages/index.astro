@@ -1,24 +1,30 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Hero from '@/components/Hero.astro';
-import GameGalleryTop from '@/components/GameGalleryTop.astro';
-import GameGalleryCompleted from '@/components/GameGalleryCompleted.astro';
-import Footer from '@/components/Footer.astro';
-import { TOP_GAMES_COUNT } from '@/config.js';
-import games from '@/data/games.json';
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/Hero.astro";
+import GameGalleryTop from "@/components/GameGalleryTop.astro";
+import GameGalleryCompleted from "@/components/GameGalleryCompleted.astro";
+import Footer from "@/components/Footer.astro";
+import { TOP_GAMES_COUNT } from "@/config.js";
+import games from "@/data/games.json";
 
 const topGames = games.topGames.slice(0, TOP_GAMES_COUNT);
 const completedGames = games.completedGames;
-const profile = games.profile || { avatar: '', level: 0, totalHours: 0, accountAgeYears: null };
+const profile = games.profile || {
+  avatar: "",
+  level: 0,
+  totalHours: 0,
+  accountAgeYears: null,
+};
 ---
 
 <Layout>
   <main>
     <Hero profile={profile} />
-    <GameGalleryTop title={`Top ${Math.min(TOP_GAMES_COUNT, games.topGames.length)} más jugados`} games={topGames} />
-    <GameGalleryCompleted title="Todos completados" games={completedGames} />
+    <GameGalleryTop
+      title={`Top ${Math.min(TOP_GAMES_COUNT, games.topGames.length)} más jugados`}
+      games={topGames}
+    />
+    <GameGalleryCompleted title="Juegos completados" games={completedGames} />
   </main>
   <Footer />
 </Layout>
-
-

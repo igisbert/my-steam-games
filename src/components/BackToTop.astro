@@ -1,0 +1,67 @@
+---
+import upIcon from "@/assets/icons/up.svg?raw";
+---
+
+<button class="back-to-top" aria-label="Volver arriba" set:html={upIcon} />
+
+<script>
+  function initBackToTop() {
+    const btn = document.querySelector(".back-to-top");
+    if (!btn) return;
+
+    const toggle = () => {
+      btn.classList.toggle("back-to-top--hidden", window.scrollY < 600);
+    };
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    window.addEventListener("scroll", toggle, { passive: true });
+    toggle();
+  }
+
+  document.addEventListener("astro:page-load", initBackToTop);
+  initBackToTop();
+</script>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    bottom: var(--space-5);
+    right: var(--space-5);
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: var(--color-accent);
+    border: none;
+    border-radius: var(--radius);
+    color: var(--color-bg);
+    cursor: pointer;
+    transition: opacity var(--transition), transform var(--transition), background var(--transition);
+    z-index: 100;
+  }
+
+  @supports (corner-shape: squircle) {
+    .back-to-top {
+      border-radius: 50%;
+      corner-shape: squircle;
+    }
+  }
+
+  .back-to-top :global(svg) {
+    width: 20px;
+    height: 20px;
+  }
+
+  .back-to-top:hover {
+    background: color-mix(in srgb, var(--color-accent), #fff 20%);
+  }
+
+  .back-to-top--hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+  }
+</style>
