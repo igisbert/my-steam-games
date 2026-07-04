@@ -9,9 +9,8 @@ interface Props {
 
 const { appid, name, playtime_forever, coverUrl, lastPlayed } = Astro.props;
 
-const hours = playtime_forever > 0 ? Math.floor(playtime_forever / 60) : null;
-const hoursText =
-  hours !== null ? `${hours.toLocaleString("es-ES")}h` : "Family Sharing";
+const hours = playtime_forever > 0 ? (playtime_forever / 60).toFixed(1) : null;
+const hoursText = hours !== null ? `${hours}h` : "Family Sharing";
 const altText = `Portada de ${name}`;
 ---
 

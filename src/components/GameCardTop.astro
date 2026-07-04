@@ -8,8 +8,8 @@ interface Props {
 
 const { appid, name, playtime_forever, lastPlayed } = Astro.props;
 
-const hours = Math.floor(playtime_forever / 60);
-const hoursText = `${hours.toLocaleString("es-ES")}h`;
+const hours = (playtime_forever / 60).toFixed(1);
+const hoursText = `${hours}h`;
 const coverUrl = `https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/header.jpg`;
 const altText = `Portada de ${name}`;
 ---
