@@ -5,8 +5,6 @@ import "@fontsource/ubuntu/500.css";
 import "@fontsource/ubuntu/700.css";
 import "@fontsource/cinzel-decorative/400.css";
 import "@fontsource/cinzel-decorative/700.css";
-/* import cinzel400 from "@fontsource/cinzel-decorative/400.css?url";
-import cinzel700 from "@fontsource/cinzel-decorative/700.css?url"; */
 import Noise from "@/components/Noise.astro";
 import BackToTop from "@/components/BackToTop.astro";
 
@@ -14,7 +12,9 @@ interface Props {
   title?: string;
 }
 
-const { title = "Jueguitos" } = Astro.props;
+const { title = "Mis jueguitos" } = Astro.props;
+
+const description = "Catálogo y registro de mi biblioteca de Steam";
 
 import "@/styles/reset.css";
 import "@/styles/styles.css";
@@ -24,12 +24,26 @@ import "@/styles/styles.css";
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#e6af2e" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:locale" content="es_ES" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/og-image.jpg" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+
     <meta name="generator" content={Astro.generator} />
-    <!--     <link rel="preload" href={cinzel400} as="style" />
-    <link rel="preload" href={cinzel700} as="style" /> -->
     <title>{title}</title>
   </head>
   <body>
