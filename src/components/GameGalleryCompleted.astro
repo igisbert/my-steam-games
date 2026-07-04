@@ -1,5 +1,6 @@
 ---
 import GameCardCompleted from "@/components/GameCardCompleted.astro";
+import GalleryTitle from "@/components/GalleryTitle.astro";
 import textIcon from "@/assets/icons/text.svg?raw";
 import timeIcon from "@/assets/icons/time.svg?raw";
 
@@ -21,12 +22,18 @@ const { title, games } = Astro.props;
 
 <section class="gallery">
   <div class="gallery__header">
-    <h2 class="gallery__title">{title}</h2>
+    <GalleryTitle title={title} />
     <div class="gallery__sort">
       <button
         class="gallery__sort-btn gallery__sort-btn--active"
-        data-sort="name" set:html={`${textIcon} Nombre`} />
-      <button class="gallery__sort-btn" data-sort="hours" set:html={`${timeIcon} Horas`} />
+        data-sort="name"
+        set:html={`${textIcon} Nombre`}
+      />
+      <button
+        class="gallery__sort-btn"
+        data-sort="hours"
+        set:html={`${timeIcon} Horas`}
+      />
     </div>
   </div>
   <div class="gallery__grid">
@@ -106,19 +113,10 @@ const { title, games } = Astro.props;
     margin-bottom: var(--space-5);
   }
 
-  .gallery__title {
-    margin: 0;
-    font-family: "Cinzel Decorative", serif;
-    font-size: var(--text-2xl);
-    font-weight: 700;
-    color: var(--color-accent);
-    text-shadow: 0 0 20px rgba(230, 175, 46, 0.3);
-  }
-
   .gallery__sort {
     position: absolute;
     right: 0;
-    top: 0;
+    bottom: 0;
     display: flex;
     gap: var(--space-2);
   }
@@ -135,9 +133,10 @@ const { title, games } = Astro.props;
     font-family: var(--font-family);
     font-size: var(--text-sm);
     cursor: pointer;
-    transition: background var(--transition),
-                color var(--transition),
-                border-color var(--transition);
+    transition:
+      background var(--transition),
+      color var(--transition),
+      border-color var(--transition);
   }
 
   .gallery__sort-btn :global(svg) {
