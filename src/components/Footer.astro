@@ -54,9 +54,7 @@ import QuoteIcon from "@/assets/icons/quote.svg";
 
   .joke {
     margin: 0;
-    margin-block: 0;
     font-family: "Ubuntu", sans-serif;
-    font-size: var(--text-base);
     font-weight: 700;
     color: var(--color-bg);
     font-size: var(--text-lg);
@@ -67,7 +65,6 @@ import QuoteIcon from "@/assets/icons/quote.svg";
 
   .footer__sub {
     margin: 0;
-    margin-block: 0;
     font-size: var(--text-xs);
     font-weight: 500;
     color: var(--color-bg);
@@ -86,8 +83,12 @@ import QuoteIcon from "@/assets/icons/quote.svg";
     "You died",
   ];
 
-  const joke = jokes[Math.floor(Math.random() * jokes.length)];
+  function initFooter() {
+    const jokeElement = document.querySelector(".joke") as HTMLElement | null;
+    if (!jokeElement) return;
+    jokeElement.textContent = jokes[Math.floor(Math.random() * jokes.length)];
+  }
 
-  const jokeElement = document.querySelector(".joke") as HTMLElement;
-  jokeElement.textContent = joke;
+  document.addEventListener("astro:page-load", initFooter);
+  initFooter();
 </script>
