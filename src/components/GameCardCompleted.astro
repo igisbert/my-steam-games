@@ -10,7 +10,7 @@ interface Props {
 const { appid, name, playtime_forever, coverUrl, lastPlayed } = Astro.props;
 
 const hours = playtime_forever > 0 ? Math.floor(playtime_forever / 60) : null;
-const hoursText = hours !== null ? `${hours.toLocaleString('es-ES')}h` : 'Horas no disponibles';
+const hoursText = hours !== null ? `${hours.toLocaleString('es-ES')}h` : 'Family Sharing';
 const altText = `Portada de ${name}`;
 ---
 
@@ -28,7 +28,11 @@ const altText = `Portada de ${name}`;
   <div class="game-card-completed__info">
     <h3 class="game-card-completed__name">{name}</h3>
     <div class="game-card-completed__meta">
-      <span class="game-card-completed__hours">{hoursText}</span>
+      {hours !== null ? (
+        <span class="game-card-completed__hours">{hoursText}</span>
+      ) : (
+        <span class="game-card-completed__pill">{hoursText}</span>
+      )}
       {lastPlayed && <span class="game-card-completed__last-played">{lastPlayed}</span>}
     </div>
   </div>
@@ -102,6 +106,24 @@ const altText = `Portada de ${name}`;
     color: var(--color-accent);
     font-weight: 700;
     letter-spacing: 0.03em;
+    transition: transform var(--transition), text-shadow var(--transition);
+  }
+
+  .game-card-completed__pill {
+    font-size: .7rem;
+    color: var(--color-surface);
+    font-weight: 600;
+    padding: .1em .5em;
+    border-radius: 999px;
+    letter-spacing: .03em;
+    background: var(--color-accent);
+  }
+
+  @media (hover: hover) {
+    .game-card-completed:hover .game-card-completed__hours:not(.game-card-completed__pill) {
+      transform: scale(1.25);
+      text-shadow: 0 0 12px color-mix(in srgb, var(--color-accent), transparent);
+    }
   }
 
   .game-card-completed__last-played {

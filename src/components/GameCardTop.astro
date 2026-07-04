@@ -102,6 +102,14 @@ const altText = `Portada de ${name}`;
     color: var(--color-accent);
     font-weight: 700;
     letter-spacing: 0.03em;
+    transition: transform var(--transition), text-shadow var(--transition);
+  }
+
+  @media (hover: hover) {
+    .game-card-top:hover .game-card-top__hours {
+      transform: scale(1.25);
+      text-shadow: 0 0 12px color-mix(in srgb, var(--color-accent), transparent);
+    }
   }
 
   .game-card-top__last-played {
