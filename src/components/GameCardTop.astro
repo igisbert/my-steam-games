@@ -27,8 +27,10 @@ const altText = `Portada de ${name}`;
   </div>
   <div class="game-card-top__info">
     <h3 class="game-card-top__name">{name}</h3>
-    <span class="game-card-top__hours">{hoursText}</span>
-    {lastPlayed && <span class="game-card-top__last-played">{lastPlayed}</span>}
+    <div class="game-card-top__meta">
+      <span class="game-card-top__hours">{hoursText}</span>
+      {lastPlayed && <span class="game-card-top__last-played">{lastPlayed}</span>}
+    </div>
   </div>
 </article>
 
@@ -69,16 +71,16 @@ const altText = `Portada de ${name}`;
   }
 
   .game-card-top__info {
-    padding: var(--space-3) var(--space-3);
+    padding: var(--space-3) var(--space-4) var(--space-3);
     display: flex;
     flex-direction: column;
-    gap: var(--space-1);
+    gap: var(--space-2);
   }
 
   .game-card-top__name {
     margin: 0;
     font-size: var(--text-base);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-primary);
     line-height: 1.3;
     display: -webkit-box;
@@ -87,15 +89,26 @@ const altText = `Portada de ${name}`;
     overflow: hidden;
   }
 
+  .game-card-top__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
   .game-card-top__hours {
     font-size: var(--text-sm);
     color: var(--color-accent);
-    font-weight: 400;
+    font-weight: 700;
+    letter-spacing: 0.03em;
   }
 
   .game-card-top__last-played {
     font-size: var(--text-xs);
     color: var(--color-primary);
-    opacity: 0.5;
+    opacity: 0.35;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: var(--space-2);
   }
 </style>
