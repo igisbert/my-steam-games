@@ -1,13 +1,16 @@
 ---
+import Tag from '@/components/Tag.astro';
+
 interface Props {
   appid: number;
   name: string;
   playtime_forever: number;
   coverUrl: string;
   lastPlayed?: string | null;
+  tags?: string[];
 }
 
-const { appid, name, playtime_forever, coverUrl, lastPlayed } = Astro.props;
+const { appid, name, playtime_forever, coverUrl, lastPlayed, tags } = Astro.props;
 
 const hours = playtime_forever > 0 ? (playtime_forever / 60).toFixed(1) : null;
 const hoursText = hours !== null ? `${hours}h` : "Family Sharing";
@@ -41,6 +44,11 @@ const altText = `Portada de ${name}`;
         )
       }
     </div>
+    {tags && tags.length > 0 && (
+      <div class="game-card-completed__tags">
+        {tags.map(tag => <Tag label={tag} />)}
+      </div>
+    )}
   </div>
 </article>
 
@@ -167,5 +175,12 @@ const altText = `Portada de ${name}`;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-left: var(--space-2);
+  }
+
+  .game-card-completed__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: var(--space-1);
   }
 </style>

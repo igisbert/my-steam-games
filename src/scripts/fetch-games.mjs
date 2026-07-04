@@ -189,6 +189,48 @@ async function fetchGameNameFromStore(appid) {
   }
 }
 
+async function fetchSteamSpyTags(appid) {
+  try {
+    const res = await fetch(`https://steamspy.com/api.php?request=appdetails&appid=${appid}`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    const tags = data?.tags
+      ? Object.entries(data.tags)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 5)
+          .map(([tag]) => tag)
+      : [];
+    return {
+      tags,
+      genre: data?.genre || '',
+      positive: data?.positive || 0,
+      negative: data?.negative || 0,
+    };
+  } catch {
+    return null;
+  }
+}
+
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+async function enrichWithSteamSpy(games) {
+  console.log(`\nFetching SteamSpy data for ${games.length} games (1 req/sec)...`);
+  for (let i = 0; i < games.length; i++) {
+    const game = games[i];
+    const spy = await fetchSteamSpyTags(game.appid);
+    if (spy) {
+      game.tags = spy.tags;
+      game.genre = spy.genre;
+      game.reviews = { positive: spy.positive, negative: spy.negative };
+    }
+    if (i % 25 === 0 && i > 0) {
+      console.log(`  ${i}/${games.length} games enriched...`);
+    }
+    if (i < games.length - 1) await sleep(1000);
+  }
+  console.log(`  ✓ SteamSpy enrichment done`);
+}
+
 async function resolveCoverUrl(appid, name) {
   const steamUrl = `https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/library_600x900.jpg`;
 
@@ -286,6 +328,7 @@ async function main() {
     data.profile = buildProfile(ownedGames, summary, level);
 
     await resolveCoverUrls(data.completedGames);
+    await enrichWithSteamSpy(data.completedGames);
     data.completedGames.sort((a, b) => a.name.localeCompare(b.name));
 
     const outDir = join(__dirname, '..', 'data');

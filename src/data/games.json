@@ -682,7 +682,7 @@
       "appid": 1580180,
       "name": "Gunbrella",
       "playtime_forever": 490,
-      "lastPlayed": "Hace 4h"
+      "lastPlayed": "Hace 16h"
     },
     {
       "appid": 519860,
@@ -2959,453 +2959,1233 @@
       "name": "Atomic Heart",
       "playtime_forever": 1604,
       "lastPlayed": "Hace 8 meses",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/library_600x900.jpg",
+      "tags": [
+        "Sexual Content",
+        "FPS",
+        "Horror",
+        "Singleplayer",
+        "Puzzle"
+      ],
+      "genre": "Action, Adventure, RPG",
+      "reviews": {
+        "positive": 31167,
+        "negative": 6828
+      }
     },
     {
       "appid": 208650,
       "name": "Batman™: Arkham Knight",
       "playtime_forever": 2012,
       "lastPlayed": "Hace 5 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/208650/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/208650/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Open World",
+        "Superhero",
+        "Stealth",
+        "Third Person"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 124147,
+        "negative": 15901
+      }
     },
     {
       "appid": 203750,
       "name": "Binary Domain",
       "playtime_forever": 618,
       "lastPlayed": "Hace 10 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/203750/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/203750/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Third-Person Shooter",
+        "Sci-fi",
+        "Robots",
+        "Cyberpunk"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 6594,
+        "negative": 1107
+      }
     },
     {
       "appid": 7670,
       "name": "BioShock",
       "playtime_forever": 1438,
       "lastPlayed": "Hace 9 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/7670/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/7670/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Atmospheric",
+        "Story Rich",
+        "Action",
+        "Singleplayer"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 29127,
+        "negative": 1804
+      }
     },
     {
       "appid": 8850,
       "name": "BioShock 2",
       "playtime_forever": 756,
       "lastPlayed": "Hace 10 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/8850/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/8850/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Action",
+        "Singleplayer",
+        "Story Rich",
+        "Atmospheric"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 12864,
+        "negative": 1555
+      }
     },
     {
       "appid": 8870,
       "name": "BioShock Infinite",
       "playtime_forever": 852,
       "lastPlayed": "Hace 3 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/8870/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/8870/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Story Rich",
+        "Action",
+        "Singleplayer",
+        "Steampunk"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 131970,
+        "negative": 8712
+      }
     },
     {
       "appid": 409710,
       "name": "BioShock Remastered",
       "playtime_forever": 913,
       "lastPlayed": "Hace 5 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/409710/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/409710/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Story Rich",
+        "Atmospheric",
+        "Horror",
+        "Singleplayer"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 47962,
+        "negative": 10301
+      }
     },
     {
       "appid": 774361,
       "name": "Blasphemous",
       "playtime_forever": 0,
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/774361/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/774361/library_600x900.jpg",
+      "tags": [
+        "Metroidvania",
+        "Pixel Graphics",
+        "Souls-like",
+        "Dark Fantasy",
+        "Gore"
+      ],
+      "genre": "Action, Adventure, Indie",
+      "reviews": {
+        "positive": 46393,
+        "negative": 5091
+      }
     },
     {
       "appid": 49520,
       "name": "Borderlands 2",
       "playtime_forever": 28501,
       "lastPlayed": "Hace 1 año",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/49520/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/49520/library_600x900.jpg",
+      "tags": [
+        "Loot",
+        "Shooter",
+        "Action",
+        "Multiplayer",
+        "Co-op"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 272900,
+        "negative": 22318
+      }
     },
     {
       "appid": 397540,
       "name": "Borderlands 3",
       "playtime_forever": 9174,
       "lastPlayed": "Hace 2 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/397540/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/397540/library_600x900.jpg",
+      "tags": [
+        "RPG",
+        "Looter Shooter",
+        "Multiplayer",
+        "FPS",
+        "Online Co-Op"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 125248,
+        "negative": 23817
+      }
     },
     {
       "appid": 8980,
       "name": "Borderlands GOTY",
       "playtime_forever": 2059,
       "lastPlayed": "Hace 8 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/8980/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/8980/library_600x900.jpg",
+      "tags": [
+        "Looter Shooter",
+        "FPS",
+        "Co-op",
+        "RPG",
+        "Action"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 28944,
+        "negative": 3579
+      }
     },
     {
       "appid": 261640,
       "name": "Borderlands: The Pre-Sequel",
       "playtime_forever": 7332,
       "lastPlayed": "Hace 10 meses",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/261640/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/261640/library_600x900.jpg",
+      "tags": [
+        "Looter Shooter",
+        "Co-op",
+        "FPS",
+        "Action",
+        "Comedy"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 33577,
+        "negative": 8802
+      }
     },
     {
       "appid": 1178830,
       "name": "Bright Memory: Infinite",
       "playtime_forever": 191,
       "lastPlayed": "Hace 4 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1178830/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1178830/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Female Protagonist",
+        "Sexual Content",
+        "FPS",
+        "Indie"
+      ],
+      "genre": "Action, Indie",
+      "reviews": {
+        "positive": 35622,
+        "negative": 3089
+      }
     },
     {
       "appid": 274190,
       "name": "Broforce",
       "playtime_forever": 497,
       "lastPlayed": "Hace 6 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/274190/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/274190/library_600x900.jpg",
+      "tags": [
+        "America",
+        "Action",
+        "Pixel Graphics",
+        "Co-op",
+        "2D"
+      ],
+      "genre": "Action, Adventure, Casual, Indie",
+      "reviews": {
+        "positive": 57080,
+        "negative": 1800
+      }
     },
     {
       "appid": 501590,
       "name": "Bulletstorm: Full Clip Edition",
       "playtime_forever": 679,
       "lastPlayed": "Hace 9 meses",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/501590/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/501590/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Gore",
+        "FPS",
+        "Violent",
+        "Adventure"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 7605,
+        "negative": 943
+      }
     },
     {
       "appid": 256290,
       "name": "Child of Light",
       "playtime_forever": 1086,
       "lastPlayed": "Hace 5 años",
-      "coverUrl": "https://cdn2.steamgriddb.com/grid/3581c5cb35d229c9ed60b39f9135f799.png"
+      "coverUrl": "https://cdn2.steamgriddb.com/grid/3581c5cb35d229c9ed60b39f9135f799.png",
+      "tags": [
+        "RPG",
+        "Fantasy",
+        "Great Soundtrack",
+        "Turn-Based",
+        "Female Protagonist"
+      ],
+      "genre": "RPG",
+      "reviews": {
+        "positive": 12122,
+        "negative": 1098
+      }
     },
     {
       "appid": 870780,
       "name": "Control Ultimate Edition",
       "playtime_forever": 986,
       "lastPlayed": "Hace 4 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/870780/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/870780/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Supernatural",
+        "Female Protagonist",
+        "Story Rich",
+        "Adventure"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 44045,
+        "negative": 6403
+      }
     },
     {
       "appid": 17300,
       "name": "Crysis",
       "playtime_forever": 723,
       "lastPlayed": "Hace 10 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/17300/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/17300/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Action",
+        "Sci-fi",
+        "Singleplayer",
+        "Shooter"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 10565,
+        "negative": 2649
+      }
     },
     {
       "appid": 108800,
       "name": "Crysis 2 Maximum Edition",
       "playtime_forever": 611,
       "lastPlayed": "Hace 10 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/108800/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/108800/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "FPS",
+        "Sci-fi",
+        "Shooter",
+        "Singleplayer"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 11621,
+        "negative": 2008
+      }
     },
     {
       "appid": 1091500,
       "name": "Cyberpunk 2077",
       "playtime_forever": 13243,
       "lastPlayed": "Hace 11 meses",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
+      "tags": [
+        "Cyberpunk",
+        "Open World",
+        "Nudity",
+        "RPG",
+        "Singleplayer"
+      ],
+      "genre": "RPG",
+      "reviews": {
+        "positive": 713071,
+        "negative": 131850
+      }
     },
     {
       "appid": 606280,
       "name": "Darksiders III",
       "playtime_forever": 1429,
       "lastPlayed": "Hace 2 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/606280/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/606280/library_600x900.jpg",
+      "tags": [
+        "Hack and Slash",
+        "Action",
+        "Female Protagonist",
+        "Souls-like",
+        "Singleplayer"
+      ],
+      "genre": "Action, Adventure, RPG",
+      "reviews": {
+        "positive": 11626,
+        "negative": 3571
+      }
     },
     {
       "appid": 1252330,
       "name": "DEATHLOOP",
       "playtime_forever": 1462,
       "lastPlayed": "Hace 2 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1252330/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1252330/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Action",
+        "Stealth",
+        "Immersive Sim",
+        "First-Person"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 22306,
+        "negative": 6899
+      }
     },
     {
       "appid": 803330,
       "name": "Destroy All Humans!",
       "playtime_forever": 424,
       "lastPlayed": "Hace 4 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/803330/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/803330/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Adventure",
+        "Villain Protagonist",
+        "Aliens",
+        "Open World"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 10010,
+        "negative": 827
+      }
     },
     {
       "appid": 337000,
       "name": "Deus Ex: Mankind Divided™",
       "playtime_forever": 3658,
       "lastPlayed": "Hace 9 meses",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/337000/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/337000/library_600x900.jpg",
+      "tags": [
+        "Cyberpunk",
+        "Stealth",
+        "RPG",
+        "Sci-fi",
+        "Story Rich"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 31037,
+        "negative": 9813
+      }
     },
     {
       "appid": 601150,
       "name": "Devil May Cry 5",
       "playtime_forever": 794,
       "lastPlayed": "Hace 4 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Hack and Slash",
+        "Great Soundtrack",
+        "Character Action Game",
+        "Demons"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 140260,
+        "negative": 5873
+      }
     },
     {
       "appid": 205100,
       "name": "Dishonored",
       "playtime_forever": 1489,
       "lastPlayed": "Hace 10 meses",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/205100/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/205100/library_600x900.jpg",
+      "tags": [
+        "Stealth",
+        "First-Person",
+        "Assassin",
+        "Action",
+        "Steampunk"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 80427,
+        "negative": 1943
+      }
     },
     {
       "appid": 220440,
       "name": "DmC Devil May Cry",
       "playtime_forever": 518,
       "lastPlayed": "Hace 7 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/220440/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/220440/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Hack and Slash",
+        "Great Soundtrack",
+        "Spectacle fighter",
+        "Demons"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 27949,
+        "negative": 2035
+      }
     },
     {
       "appid": 379720,
       "name": "DOOM",
       "playtime_forever": 1114,
       "lastPlayed": "Hace 6 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/379720/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/379720/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Gore",
+        "Action",
+        "Shooter",
+        "Great Soundtrack"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 198001,
+        "negative": 9278
+      }
     },
     {
       "appid": 782330,
       "name": "DOOM Eternal",
       "playtime_forever": 1140,
       "lastPlayed": "Hace 5 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/782330/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/782330/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Action",
+        "Gore",
+        "Great Soundtrack",
+        "Fast-Paced"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 187807,
+        "negative": 18219
+      }
     },
     {
       "appid": 519860,
       "name": "DUSK",
       "playtime_forever": 476,
       "lastPlayed": "Hace 1 año",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/519860/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/519860/library_600x900.jpg",
+      "tags": [
+        "Boomer Shooter",
+        "FPS",
+        "Retro",
+        "Shooter",
+        "Fast-Paced"
+      ],
+      "genre": "Action, Indie",
+      "reviews": {
+        "positive": 22830,
+        "negative": 639
+      }
     },
     {
       "appid": 1245620,
       "name": "ELDEN RING",
       "playtime_forever": 0,
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_600x900.jpg",
+      "tags": [
+        "Souls-like",
+        "Open World",
+        "Dark Fantasy",
+        "RPG",
+        "Difficult"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 981540,
+        "negative": 75137
+      }
     },
     {
       "appid": 377160,
       "name": "Fallout 4",
       "playtime_forever": 10954,
       "lastPlayed": "Hace 3 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/377160/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/377160/library_600x900.jpg",
+      "tags": [
+        "Open World",
+        "Post-apocalyptic",
+        "Singleplayer",
+        "Exploration",
+        "RPG"
+      ],
+      "genre": "RPG",
+      "reviews": {
+        "positive": 326054,
+        "negative": 66233
+      }
     },
     {
       "appid": 22380,
       "name": "Fallout: New Vegas",
       "playtime_forever": 5215,
       "lastPlayed": "Hace 2 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/22380/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/22380/library_600x900.jpg",
+      "tags": [
+        "Open World",
+        "RPG",
+        "Post-apocalyptic",
+        "Singleplayer",
+        "Moddable"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 218763,
+        "negative": 8937
+      }
     },
     {
       "appid": 552520,
       "name": "Far Cry 5",
       "playtime_forever": 1161,
       "lastPlayed": "Hace 7 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/552520/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/552520/library_600x900.jpg",
+      "tags": [
+        "Open World",
+        "Action-Adventure",
+        "Multiplayer",
+        "Co-op",
+        "FPS"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 140377,
+        "negative": 33100
+      }
     },
     {
       "appid": 220240,
       "name": "Far Cry® 3",
       "playtime_forever": 797,
       "lastPlayed": "Hace 10 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/220240/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/220240/library_600x900.jpg",
+      "tags": [
+        "Open World",
+        "FPS",
+        "Action",
+        "Adventure",
+        "Multiplayer"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 101914,
+        "negative": 12105
+      }
     },
     {
       "appid": 233270,
       "name": "Far Cry® 3 Blood Dragon",
       "playtime_forever": 709,
       "lastPlayed": "Hace 5 años",
-      "coverUrl": "https://cdn2.steamgriddb.com/grid/84aaa84129e365590aeb86b57697edb9.png"
+      "coverUrl": "https://cdn2.steamgriddb.com/grid/84aaa84129e365590aeb86b57697edb9.png",
+      "tags": [
+        "FPS",
+        "1980s",
+        "Comedy",
+        "Open World",
+        "Action"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 15566,
+        "negative": 2168
+      }
     },
     {
       "appid": 1097840,
       "name": "Gears 5",
       "playtime_forever": 1132,
       "lastPlayed": "Hace 3 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1097840/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1097840/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Adventure",
+        "Third-Person Shooter",
+        "Multiplayer",
+        "Co-op"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 16400,
+        "negative": 6909
+      }
     },
     {
       "appid": 1580180,
       "name": "Gunbrella",
       "playtime_forever": 490,
-      "lastPlayed": "Hace 4h",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1580180/library_600x900.jpg"
+      "lastPlayed": "Hace 16h",
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1580180/library_600x900.jpg",
+      "tags": [
+        "Side Scroller",
+        "Exploration",
+        "Platformer",
+        "Difficult",
+        "Action Roguelike"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 718,
+        "negative": 115
+      }
     },
     {
       "appid": 220,
       "name": "Half-Life 2",
       "playtime_forever": 1120,
       "lastPlayed": "Hace 3 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/220/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/220/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Action",
+        "Sci-fi",
+        "Classic",
+        "Singleplayer"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 239721,
+        "negative": 5906
+      }
     },
     {
       "appid": 219150,
       "name": "Hotline Miami",
       "playtime_forever": 595,
       "lastPlayed": "Hace 7 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/219150/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/219150/library_600x900.jpg",
+      "tags": [
+        "Great Soundtrack",
+        "Violent",
+        "Action",
+        "Indie",
+        "Pixel Graphics"
+      ],
+      "genre": "Action, Indie",
+      "reviews": {
+        "positive": 103599,
+        "negative": 3058
+      }
     },
     {
       "appid": 234140,
       "name": "Mad Max",
       "playtime_forever": 3457,
       "lastPlayed": "Hace 5 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/234140/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/234140/library_600x900.jpg",
+      "tags": [
+        "Open World",
+        "Vehicular Combat",
+        "Post-apocalyptic",
+        "Action",
+        "Driving"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 76230,
+        "negative": 6430
+      }
     },
     {
       "appid": 50130,
       "name": "Mafia II (Classic)",
       "playtime_forever": 778,
       "lastPlayed": "Hace 10 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/50130/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/50130/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Open World",
+        "Crime",
+        "Story Rich",
+        "Atmospheric"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 51876,
+        "negative": 3121
+      }
     },
     {
       "appid": 17460,
       "name": "Mass Effect (2007)",
       "playtime_forever": 1150,
       "lastPlayed": "Hace 10 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/17460/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/17460/library_600x900.jpg",
+      "tags": [
+        "RPG",
+        "Sci-fi",
+        "Story Rich",
+        "Action",
+        "Space"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 15394,
+        "negative": 1040
+      }
     },
     {
       "appid": 24980,
       "name": "Mass Effect 2 (2010)",
       "playtime_forever": 1672,
       "lastPlayed": "Hace 10 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/24980/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/24980/library_600x900.jpg",
+      "tags": [
+        "RPG",
+        "Sci-fi",
+        "Story Rich",
+        "Third-Person Shooter",
+        "Action"
+      ],
+      "genre": "RPG",
+      "reviews": {
+        "positive": 14623,
+        "negative": 920
+      }
     },
     {
       "appid": 204100,
       "name": "Max Payne 3",
       "playtime_forever": 1184,
       "lastPlayed": "Hace 6 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/204100/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/204100/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Third-Person Shooter",
+        "Bullet Time",
+        "Story Rich",
+        "Multiplayer"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 49420,
+        "negative": 7656
+      }
     },
     {
       "appid": 43110,
       "name": "Metro 2033",
       "playtime_forever": 798,
       "lastPlayed": "Hace 10 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/43110/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/43110/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Post-apocalyptic",
+        "Action",
+        "Atmospheric",
+        "Horror"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 15228,
+        "negative": 1158
+      }
     },
     {
       "appid": 412020,
       "name": "Metro Exodus",
       "playtime_forever": 1877,
       "lastPlayed": "Hace 1 año",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/412020/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/412020/library_600x900.jpg",
+      "tags": [
+        "Post-apocalyptic",
+        "FPS",
+        "Singleplayer",
+        "Open World",
+        "Story Rich"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 108945,
+        "negative": 12370
+      }
     },
     {
       "appid": 287390,
       "name": "Metro: Last Light Redux",
       "playtime_forever": 647,
       "lastPlayed": "Hace 7 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/287390/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/287390/library_600x900.jpg",
+      "tags": [
+        "Post-apocalyptic",
+        "FPS",
+        "Atmospheric",
+        "Action",
+        "Story Rich"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 63534,
+        "negative": 6562
+      }
     },
     {
       "appid": 620,
       "name": "Portal 2",
       "playtime_forever": 531,
       "lastPlayed": "Hace 7 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/620/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/620/library_600x900.jpg",
+      "tags": [
+        "Platformer",
+        "Puzzle",
+        "First-Person",
+        "Dark Humor",
+        "Story Rich"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 427835,
+        "negative": 5675
+      }
     },
     {
       "appid": 480490,
       "name": "Prey",
       "playtime_forever": 1621,
       "lastPlayed": "Hace 8 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/480490/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/480490/library_600x900.jpg",
+      "tags": [
+        "Sci-fi",
+        "Immersive Sim",
+        "Space",
+        "Singleplayer",
+        "Horror"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 46381,
+        "negative": 4652
+      }
     },
     {
       "appid": 548570,
       "name": "RAGE 2",
       "playtime_forever": 1321,
       "lastPlayed": "Hace 4 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/548570/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/548570/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "FPS",
+        "Open World",
+        "Post-apocalyptic",
+        "Vehicular Combat"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 10320,
+        "negative": 6086
+      }
     },
     {
       "appid": 233130,
       "name": "Shadow Warrior",
       "playtime_forever": 865,
       "lastPlayed": "Hace 10 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/233130/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/233130/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "FPS",
+        "Swordplay",
+        "Gore",
+        "Comedy"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 24071,
+        "negative": 2080
+      }
     },
     {
       "appid": 324800,
       "name": "Shadow Warrior 2",
       "playtime_forever": 1803,
       "lastPlayed": "Hace 5 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/324800/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/324800/library_600x900.jpg",
+      "tags": [
+        "Action",
+        "Gore",
+        "Looter Shooter",
+        "FPS",
+        "Co-op"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 23758,
+        "negative": 3472
+      }
     },
     {
       "appid": 847370,
       "name": "Sunset Overdrive",
       "playtime_forever": 1301,
       "lastPlayed": "Hace 6 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/847370/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/847370/library_600x900.jpg",
+      "tags": [
+        "Open World",
+        "Action",
+        "Parkour",
+        "Character Customization",
+        "Third-Person Shooter"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 11638,
+        "negative": 1261
+      }
     },
     {
       "appid": 330830,
       "name": "Tales from the Borderlands",
       "playtime_forever": 774,
       "lastPlayed": "Hace 8 meses",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/330830/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/330830/library_600x900.jpg",
+      "tags": [
+        "Comedy",
+        "Adventure",
+        "Story Rich",
+        "Choices Matter",
+        "Singleplayer"
+      ],
+      "genre": "Adventure",
+      "reviews": {
+        "positive": 17618,
+        "negative": 988
+      }
     },
     {
       "appid": 67370,
       "name": "The Darkness II",
       "playtime_forever": 912,
       "lastPlayed": "Hace 5 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/67370/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/67370/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Action",
+        "Gore",
+        "Dark",
+        "Shooter"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 18121,
+        "negative": 1651
+      }
     },
     {
       "appid": 764790,
       "name": "The Messenger",
       "playtime_forever": 916,
       "lastPlayed": "Hace 1 año",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/764790/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/764790/library_600x900.jpg",
+      "tags": [
+        "Retro",
+        "Platformer",
+        "Pixel Graphics",
+        "Metroidvania",
+        "Ninja"
+      ],
+      "genre": "Action, Indie",
+      "reviews": {
+        "positive": 11059,
+        "negative": 801
+      }
     },
     {
       "appid": 20920,
       "name": "The Witcher 2: Assassins of Kings Enhanced Edition",
       "playtime_forever": 1730,
       "lastPlayed": "Hace 5 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/20920/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/20920/library_600x900.jpg",
+      "tags": [
+        "RPG",
+        "Fantasy",
+        "Mature",
+        "Story Rich",
+        "Choices Matter"
+      ],
+      "genre": "RPG",
+      "reviews": {
+        "positive": 77950,
+        "negative": 9114
+      }
     },
     {
       "appid": 292030,
       "name": "The Witcher 3: Wild Hunt",
       "playtime_forever": 8165,
       "lastPlayed": "Hace 3 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/library_600x900.jpg",
+      "tags": [
+        "Open World",
+        "RPG",
+        "Story Rich",
+        "Atmospheric",
+        "Mature"
+      ],
+      "genre": "RPG",
+      "reviews": {
+        "positive": 802993,
+        "negative": 32356
+      }
     },
     {
       "appid": 1286680,
       "name": "Tiny Tina's Wonderlands",
       "playtime_forever": 2706,
       "lastPlayed": "Hace 11 meses",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1286680/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1286680/library_600x900.jpg",
+      "tags": [
+        "Loot",
+        "Adventure",
+        "Looter Shooter",
+        "Multiplayer",
+        "Shooter"
+      ],
+      "genre": "Action, Adventure, RPG",
+      "reviews": {
+        "positive": 15933,
+        "negative": 6053
+      }
     },
     {
       "appid": 206440,
       "name": "To the Moon",
       "playtime_forever": 350,
       "lastPlayed": "Hace 6 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/206440/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/206440/library_600x900.jpg",
+      "tags": [
+        "Story Rich",
+        "Great Soundtrack",
+        "Indie",
+        "Emotional",
+        "RPGMaker"
+      ],
+      "genre": "Adventure, Indie, RPG",
+      "reviews": {
+        "positive": 77246,
+        "negative": 3015
+      }
     },
     {
       "appid": 235600,
       "name": "Tom Clancy's Splinter Cell Blacklist",
       "playtime_forever": 645,
       "lastPlayed": "Hace 5 años",
-      "coverUrl": "https://cdn2.steamgriddb.com/grid/5dffa05994b7c919d53dd8423441a5fc.png"
+      "coverUrl": "https://cdn2.steamgriddb.com/grid/5dffa05994b7c919d53dd8423441a5fc.png",
+      "tags": [
+        "Stealth",
+        "Action",
+        "Co-op",
+        "Third Person",
+        "Singleplayer"
+      ],
+      "genre": "Action, Adventure",
+      "reviews": {
+        "positive": 15918,
+        "negative": 3989
+      }
     },
     {
       "appid": 612880,
       "name": "Wolfenstein II: The New Colossus",
       "playtime_forever": 2086,
       "lastPlayed": "Hace 1 año",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/612880/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/612880/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Action",
+        "Gore",
+        "Singleplayer",
+        "Alternate History"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 36084,
+        "negative": 8413
+      }
     },
     {
       "appid": 201810,
       "name": "Wolfenstein: The New Order",
       "playtime_forever": 909,
       "lastPlayed": "Hace 8 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/201810/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/201810/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Action",
+        "Alternate History",
+        "Shooter",
+        "Singleplayer"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 51691,
+        "negative": 4778
+      }
     },
     {
       "appid": 350080,
       "name": "Wolfenstein: The Old Blood ",
       "playtime_forever": 355,
       "lastPlayed": "Hace 9 años",
-      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/350080/library_600x900.jpg"
+      "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/350080/library_600x900.jpg",
+      "tags": [
+        "FPS",
+        "Action",
+        "World War II",
+        "Alternate History",
+        "Shooter"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 18761,
+        "negative": 2052
+      }
     }
   ],
   "missingGames": [

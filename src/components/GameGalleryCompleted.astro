@@ -10,6 +10,7 @@ interface Game {
   playtime_forever: number;
   coverUrl?: string;
   lastPlayed?: string | null;
+  tags?: string[];
 }
 
 interface Props {
@@ -48,6 +49,7 @@ const { title, games } = Astro.props;
             `https://cdn.cloudflare.steamstatic.com/steam/apps/${game.appid}/library_600x900.jpg`
           }
           lastPlayed={game.lastPlayed}
+          tags={game.tags}
         />
       ))
     }
