@@ -3,12 +3,13 @@ import tagIcon from "@/assets/icons/tag.svg?raw";
 
 interface Props {
   tags: string[];
+  mobileTop?: boolean;
 }
 
-const { tags } = Astro.props;
+const { tags, mobileTop = false } = Astro.props;
 ---
 
-<div class="tag-trigger">
+<div class:list={["tag-trigger", { "tag-trigger--mobile-top": mobileTop }]}>
   <button
     class="tag-trigger__btn"
     aria-expanded="false"
@@ -137,12 +138,12 @@ const { tags } = Astro.props;
   }
 
   @media (max-width: 480px) {
-    .tag-trigger {
+    .tag-trigger--mobile-top {
       top: 6px;
       bottom: auto;
     }
 
-    .tag-trigger__panel {
+    .tag-trigger--mobile-top .tag-trigger__panel {
       top: calc(100% + 10px);
       bottom: auto;
       min-width: 120px;
