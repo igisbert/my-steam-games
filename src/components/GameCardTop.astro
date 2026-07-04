@@ -1,5 +1,5 @@
 ---
-import TagPanel from '@/components/TagPanel.astro';
+import TagPanel from "@/components/TagPanel.astro";
 
 interface Props {
   appid: number;
@@ -54,7 +54,7 @@ const altText = `Portada de ${name}`;
       box-shadow var(--transition),
       transform var(--transition);
     animation: reveal linear both;
-    animation-timeline: view();
+    animation-timeline: view() !important;
     animation-range: entry 5% cover 20%;
   }
 

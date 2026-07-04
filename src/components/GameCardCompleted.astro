@@ -1,5 +1,5 @@
 ---
-import TagPanel from '@/components/TagPanel.astro';
+import TagPanel from "@/components/TagPanel.astro";
 
 interface Props {
   appid: number;
@@ -10,7 +10,8 @@ interface Props {
   tags?: string[];
 }
 
-const { appid, name, playtime_forever, coverUrl, lastPlayed, tags } = Astro.props;
+const { appid, name, playtime_forever, coverUrl, lastPlayed, tags } =
+  Astro.props;
 
 const hours = playtime_forever > 0 ? (playtime_forever / 60).toFixed(1) : null;
 const hoursText = hours !== null ? `${hours}h` : "Family Sharing";
@@ -60,7 +61,7 @@ const altText = `Portada de ${name}`;
       box-shadow var(--transition),
       transform var(--transition);
     animation: reveal linear both;
-    animation-timeline: view();
+    animation-timeline: view() !important;
     animation-range: entry 5% cover 20%;
   }
 

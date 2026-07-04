@@ -22,9 +22,9 @@ const { profile } = Astro.props;
     />
   </div>
   <div class="hero__hours">
-    <h1 class="hero__hours-value"
-      >{profile.totalHours.toLocaleString("es-ES")}</h1
-    >
+    <h1 class="hero__hours-value">
+      {profile.totalHours.toLocaleString("es-ES")}
+    </h1>
   </div>
   <span class="hero__label"
     >horas jugadas en steam<br />durante <span class="hero__label-accent"
@@ -38,7 +38,7 @@ const { profile } = Astro.props;
     text-align: center;
     padding: clamp(60px, 10vw, 100px) var(--space-5) clamp(80px, 12vw, 120px);
     animation: heroScroll linear both;
-    animation-timeline: scroll(block);
+    animation-timeline: scroll(block) !important;
     animation-range: 5rem 20rem;
   }
 

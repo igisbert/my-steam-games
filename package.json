@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "fetch": "node src/scripts/fetch-games.mjs",
-    "build": "npm run fetch && astro build",
+    "build": "pnpm run fetch && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
