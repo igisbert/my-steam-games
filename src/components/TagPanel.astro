@@ -132,5 +132,25 @@ const { tags } = Astro.props;
     padding: 3px 8px;
     border-radius: 999px;
     white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  @media (max-width: 480px) {
+    .tag-trigger {
+      top: 6px;
+      bottom: auto;
+    }
+
+    .tag-trigger__panel {
+      top: calc(100% + 10px);
+      bottom: auto;
+      min-width: 120px;
+      max-width: 150px;
+    }
+
+    .tag-trigger__pill {
+      font-size: 0.9rem;
+    }
   }
 </style>
