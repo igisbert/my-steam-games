@@ -331,6 +331,9 @@ async function main() {
     await enrichWithSteamSpy(data.completedGames);
     data.completedGames.sort((a, b) => a.name.localeCompare(b.name));
 
+    const topToEnrich = data.topGames.slice(0, 20);
+    await enrichWithSteamSpy(topToEnrich);
+
     const outDir = join(__dirname, '..', 'data');
     mkdirSync(outDir, { recursive: true });
     const outPath = join(outDir, 'games.json');

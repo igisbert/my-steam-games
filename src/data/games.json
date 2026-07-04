@@ -4,121 +4,361 @@
       "appid": 359550,
       "name": "Tom Clancy's Rainbow Six Siege",
       "playtime_forever": 145551,
-      "lastPlayed": "Hace 1 año"
+      "lastPlayed": "Hace 1 año",
+      "tags": [
+        "FPS",
+        "PvP",
+        "Multiplayer",
+        "Tactical",
+        "e-sports"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 1172854,
+        "negative": 225730
+      }
     },
     {
       "appid": 1454400,
       "name": "Cookie Clicker",
       "playtime_forever": 56549,
-      "lastPlayed": "Hace 10 meses"
+      "lastPlayed": "Hace 10 meses",
+      "tags": [
+        "Clicker",
+        "Idler",
+        "Casual",
+        "Indie",
+        "Pixel Graphics"
+      ],
+      "genre": "Casual, Indie, Simulation, Strategy",
+      "reviews": {
+        "positive": 77218,
+        "negative": 2674
+      }
     },
     {
       "appid": 578080,
       "name": "PUBG: BATTLEGROUNDS",
       "playtime_forever": 34180,
-      "lastPlayed": "Hace 9 días"
+      "lastPlayed": "Hace 9 días",
+      "tags": [
+        "Survival",
+        "Shooter",
+        "Battle Royale",
+        "Multiplayer",
+        "FPS"
+      ],
+      "genre": "Action, Adventure, Massively Multiplayer, Free To Play",
+      "reviews": {
+        "positive": 1520457,
+        "negative": 1037487
+      }
     },
     {
       "appid": 49520,
       "name": "Borderlands 2",
       "playtime_forever": 28501,
-      "lastPlayed": "Hace 1 año"
+      "lastPlayed": "Hace 1 año",
+      "tags": [
+        "Loot",
+        "Shooter",
+        "Action",
+        "Multiplayer",
+        "Co-op"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 272900,
+        "negative": 22318
+      }
     },
     {
       "appid": 204300,
       "name": "Awesomenauts",
       "playtime_forever": 20986,
-      "lastPlayed": "Hace 7 años"
+      "lastPlayed": "Hace 7 años",
+      "tags": [
+        "MOBA",
+        "Multiplayer",
+        "2D",
+        "Platformer",
+        "Action"
+      ],
+      "genre": "Action, Indie, Strategy",
+      "reviews": {
+        "positive": 22618,
+        "negative": 4113
+      }
     },
     {
       "appid": 730,
       "name": "Counter-Strike 2",
       "playtime_forever": 19683,
-      "lastPlayed": "Hace 6 días"
+      "lastPlayed": "Hace 6 días",
+      "tags": [
+        "FPS",
+        "Shooter",
+        "Multiplayer",
+        "Competitive",
+        "Action"
+      ],
+      "genre": "Action, Free To Play",
+      "reviews": {
+        "positive": 7642084,
+        "negative": 1173003
+      }
     },
     {
       "appid": 686810,
       "name": "Hell Let Loose",
       "playtime_forever": 18751,
-      "lastPlayed": "Hace 3 meses"
+      "lastPlayed": "Hace 3 meses",
+      "tags": [
+        "Shooter",
+        "Realistic",
+        "World War II",
+        "Multiplayer",
+        "FPS"
+      ],
+      "genre": "Action, Indie, Massively Multiplayer, Simulation, Strategy",
+      "reviews": {
+        "positive": 113447,
+        "negative": 24230
+      }
     },
     {
       "appid": 250900,
       "name": "The Binding of Isaac: Rebirth",
       "playtime_forever": 16928,
-      "lastPlayed": "Hace 1 año"
+      "lastPlayed": "Hace 1 año",
+      "tags": [
+        "Action Roguelike",
+        "Rogue-like",
+        "Indie",
+        "Replay Value",
+        "Difficult"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 334165,
+        "negative": 9255
+      }
     },
     {
       "appid": 1091500,
       "name": "Cyberpunk 2077",
       "playtime_forever": 13243,
-      "lastPlayed": "Hace 11 meses"
+      "lastPlayed": "Hace 11 meses",
+      "tags": [
+        "Cyberpunk",
+        "Open World",
+        "Nudity",
+        "RPG",
+        "Singleplayer"
+      ],
+      "genre": "RPG",
+      "reviews": {
+        "positive": 713071,
+        "negative": 131850
+      }
     },
     {
       "appid": 289070,
       "name": "Sid Meier's Civilization VI",
       "playtime_forever": 12980,
-      "lastPlayed": "Hace 5 meses"
+      "lastPlayed": "Hace 5 meses",
+      "tags": [
+        "Strategy",
+        "Turn-Based Strategy",
+        "Multiplayer",
+        "Historical",
+        "Grand Strategy"
+      ],
+      "genre": "Strategy",
+      "reviews": {
+        "positive": 304053,
+        "negative": 45867
+      }
     },
     {
       "appid": 218620,
       "name": "PAYDAY 2",
       "playtime_forever": 12294,
-      "lastPlayed": "Hace 5 años"
+      "lastPlayed": "Hace 5 años",
+      "tags": [
+        "Co-op",
+        "Action",
+        "FPS",
+        "Heist",
+        "Multiplayer"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 594327,
+        "negative": 68755
+      }
     },
     {
       "appid": 377160,
       "name": "Fallout 4",
       "playtime_forever": 10954,
-      "lastPlayed": "Hace 3 años"
+      "lastPlayed": "Hace 3 años",
+      "tags": [
+        "Open World",
+        "Post-apocalyptic",
+        "Singleplayer",
+        "Exploration",
+        "RPG"
+      ],
+      "genre": "RPG",
+      "reviews": {
+        "positive": 326054,
+        "negative": 66233
+      }
     },
     {
       "appid": 1517290,
       "name": "Battlefield™ 2042",
       "playtime_forever": 10400,
-      "lastPlayed": "Hace 9 meses"
+      "lastPlayed": "Hace 9 meses",
+      "tags": [
+        "FPS",
+        "Multiplayer",
+        "Shooter",
+        "Military",
+        "War"
+      ],
+      "genre": "Action, Adventure, Casual",
+      "reviews": {
+        "positive": 139186,
+        "negative": 158588
+      }
     },
     {
       "appid": 397540,
       "name": "Borderlands 3",
       "playtime_forever": 9174,
-      "lastPlayed": "Hace 2 años"
+      "lastPlayed": "Hace 2 años",
+      "tags": [
+        "RPG",
+        "Looter Shooter",
+        "Multiplayer",
+        "FPS",
+        "Online Co-Op"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 125248,
+        "negative": 23817
+      }
     },
     {
       "appid": 370240,
       "name": "NBA 2K16",
       "playtime_forever": 9041,
-      "lastPlayed": "Hace 8 años"
+      "lastPlayed": "Hace 8 años",
+      "tags": [
+        "Sports",
+        "Basketball",
+        "Multiplayer",
+        "Simulation",
+        "Singleplayer"
+      ],
+      "genre": "Sports",
+      "reviews": {
+        "positive": 3817,
+        "negative": 3556
+      }
     },
     {
       "appid": 232090,
       "name": "Killing Floor 2",
       "playtime_forever": 8232,
-      "lastPlayed": "Hace 5 años"
+      "lastPlayed": "Hace 5 años",
+      "tags": [
+        "Zombies",
+        "Multiplayer",
+        "Online Co-Op",
+        "Gore",
+        "FPS"
+      ],
+      "genre": "Action",
+      "reviews": {
+        "positive": 111325,
+        "negative": 15541
+      }
     },
     {
       "appid": 292030,
       "name": "The Witcher 3: Wild Hunt",
       "playtime_forever": 8165,
-      "lastPlayed": "Hace 3 años"
+      "lastPlayed": "Hace 3 años",
+      "tags": [
+        "Open World",
+        "RPG",
+        "Story Rich",
+        "Atmospheric",
+        "Mature"
+      ],
+      "genre": "RPG",
+      "reviews": {
+        "positive": 802993,
+        "negative": 32356
+      }
     },
     {
       "appid": 105600,
       "name": "Terraria",
       "playtime_forever": 7611,
-      "lastPlayed": "Hace 3 años"
+      "lastPlayed": "Hace 3 años",
+      "tags": [
+        "Open World Survival Craft",
+        "Sandbox",
+        "Survival",
+        "2D",
+        "Multiplayer"
+      ],
+      "genre": "Action, Adventure, Indie, RPG",
+      "reviews": {
+        "positive": 1373979,
+        "negative": 35494
+      }
     },
     {
       "appid": 261640,
       "name": "Borderlands: The Pre-Sequel",
       "playtime_forever": 7332,
-      "lastPlayed": "Hace 10 meses"
+      "lastPlayed": "Hace 10 meses",
+      "tags": [
+        "Looter Shooter",
+        "Co-op",
+        "FPS",
+        "Action",
+        "Comedy"
+      ],
+      "genre": "Action, RPG",
+      "reviews": {
+        "positive": 33577,
+        "negative": 8802
+      }
     },
     {
       "appid": 632360,
       "name": "Risk of Rain 2",
       "playtime_forever": 7107,
-      "lastPlayed": "Hace 9 meses"
+      "lastPlayed": "Hace 9 meses",
+      "tags": [
+        "Third-Person Shooter",
+        "Action Roguelike",
+        "Multiplayer",
+        "Co-op",
+        "Action"
+      ],
+      "genre": "Action, Indie",
+      "reviews": {
+        "positive": 293127,
+        "negative": 20450
+      }
     },
     {
       "appid": 2357570,
@@ -682,7 +922,7 @@
       "appid": 1580180,
       "name": "Gunbrella",
       "playtime_forever": 490,
-      "lastPlayed": "Hace 16h"
+      "lastPlayed": "Hace 17h"
     },
     {
       "appid": 519860,
@@ -3659,7 +3899,7 @@
       "appid": 1580180,
       "name": "Gunbrella",
       "playtime_forever": 490,
-      "lastPlayed": "Hace 16h",
+      "lastPlayed": "Hace 17h",
       "coverUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1580180/library_600x900.jpg",
       "tags": [
         "Side Scroller",
