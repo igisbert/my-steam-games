@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro';
 import Hero from '@/components/Hero.astro';
 import GameGalleryTop from '@/components/GameGalleryTop.astro';
 import GameGalleryCompleted from '@/components/GameGalleryCompleted.astro';
+import Footer from '@/components/Footer.astro';
 import { TOP_GAMES_COUNT } from '@/config.js';
 import games from '@/data/games.json';
 
@@ -17,6 +18,7 @@ const profile = games.profile || { avatar: '', level: 0, totalHours: 0, accountA
     <GameGalleryTop title={`Top ${Math.min(TOP_GAMES_COUNT, games.topGames.length)} más jugados`} games={topGames} />
     <GameGalleryCompleted title="Todos completados" games={completedGames} />
   </main>
+  <Footer />
 </Layout>
 
 
