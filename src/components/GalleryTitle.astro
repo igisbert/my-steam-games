@@ -36,5 +36,10 @@ const { title } = Astro.props;
     );
     transform: rotate(-1.5deg);
     opacity: 0.6;
+
+    @media (width <= 600px) {
+      width: 100%;
+      left: 0;
+    }
   }
 </style>
